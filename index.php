@@ -1,0 +1,13 @@
+<?php
+/*
+网站的入口
+*/
+//网站令牌，确保所有人是从这里进入的。
+define("TOKEN",true);
+include("config.php");
+include("function.php");
+include("Controller.class.php");
+$_CTRL=isset($_GET["ctrl"])?$_GET["ctrl"]:"index";
+Controller::$_CTRL();
+unset($_GET["ctrl"]);
+?>
