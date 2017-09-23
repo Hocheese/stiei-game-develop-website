@@ -1,4 +1,5 @@
 <?php
+include("model/user.php");
 class User extends Controller{
 	public function vcode(){
 		header("Content-Type:image/png");
@@ -42,6 +43,21 @@ class User extends Controller{
 	
 	private function confirm_verCode($str){
 		return strtolower($str)==strtolower($_SESSION['verCode']);
+	}
+	
+	public function reg(){
+		
+	}
+	
+	public function login(){
+		//echo $_POST['usercode'];
+		if(!isset($_POST['usercode'])||!isset($_POST['password'])){
+			$rel["error"]=4;
+			$rel["data"]="未接收到提交的参数。你是……信安专业的同学？？";
+		}else{
+			$rel=login((int)$_POST['usercode'],$_POST['password']);
+		}
+		echo json_encode($rel);
 	}
 }
 ?>

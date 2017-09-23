@@ -1,1 +1,22 @@
 [18:12:32][模块错误]User不存在，路径：controller/Userclass.php
+[23:01:22][通知]访问了测试文件
+[23:04:16][通知]访问了测试文件
+[23:04:20][通知]访问了测试文件
+[23:04:34][通知]访问了测试文件
+[23:04:36][SQL错误]
+[23:05:18][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=0
+[23:05:18][SQL错误]
+[23:07:10][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=0
+[23:07:10][SQL错误]
+[23:08:28][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=0
+[23:08:28][SQL错误]
+[23:08:29][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=0
+[23:08:29][SQL错误]
+[23:11:11][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=0
+[23:11:11][SQL错误]No database selected
+[23:12:13][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=0
+[23:12:13][SQL错误]No database selected
+[23:13:22][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=0
+[23:13:22][SQL错误]
+[23:13:48][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=0
+[23:18:26][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=0

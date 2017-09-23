@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body><table width="100%" border="1">
+  <tbody>
+    <tr>
+      <th scope="col">地址 </th>
+      <th scope="col">说明 </th>
+      <th scope="col">参数 </th>
+      <th scope="col">返回 </th>
+    </tr>
+    <tr>
+      <td colspan="4">User控制器</td>
+    </tr>
+    <tr>
+      <td>?ctrl=user&amp;act=vcode</td>
+      <td>获取验证码图片</td>
+      <td>无</td>
+      <td><p>类型：图片</p>
+        <p>大小：100*40</p></td>
+    </tr>
+    <tr>
+      <td>?ctrl=user&amp;act=login</td>
+      <td>提交登录信息</td>
+		<td><p>POST：usercode 账号</p><p>POST：password密码</p></td>
+      <td><p>类型：json</p>
+      <p>字段：error 错误代码</p>
+      <p>0：无错误；1：数据库出错2：账号不存在3：密码错误4：未接收到参数</p>
+      <p>字段data：数据</p>
+      <p>当error=0时：一个包含用户信息的json</p>
+      <p>当error!=0时：一个包含错误信息的字符串。</p></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

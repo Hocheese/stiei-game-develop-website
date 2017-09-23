@@ -8,6 +8,7 @@ session_start();
 include("config.php");
 include("function.php");
 include("Controller.class.php");
+include("Database.class.php");
 $_CTRL=isset($_GET["ctrl"])?$_GET["ctrl"]:"index";
 Controller::$_CTRL();
 unset($_GET["ctrl"]);

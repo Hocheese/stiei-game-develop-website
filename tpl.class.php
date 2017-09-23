@@ -6,7 +6,7 @@
 
 
 */
-class tpl{
+class Tpl{
 	private $tplPath;
 	private $error=0;
 	private $tplData;
@@ -31,7 +31,7 @@ class tpl{
 				$this->tplData=fread($handle,filesize($this->tplPath));
 				while(($tplInclude=preg_match('/{tpl:([a-zA-Z.]+)}/',$this->tplData,$matches))!=0){
 			
-					$tplobj=new tpl($matches[1]);
+					$tplobj=new Tpl($matches[1]);
 
 					if($tplobj->error!=0){
 						$this->tplData=preg_replace('/{tpl:([a-zA-Z.]+)}/',"<!--模板错误：-->\n<!--文件名：".'${1}'."-->\n<!--错误信息：".$tplobj->error.'-->',$this->tplData,1);
@@ -72,4 +72,3 @@ class tpl{
 	
 }
 ?>
-
