@@ -20,6 +20,7 @@ function login(int $accountCode,String $passowrd){
 		$rel["data"]=$rel["data"][0];
 		if(password_verify(md5(md5($passowrd).$rel["data"]["timeline"]),$rel["data"]["password"])){
 			unset($rel["data"]["password"]);
+			unset($rel["data"]["timeline"]);
 		}else{
 			$rel["error"]=3;
 			$rel["data"]="密码错误";
