@@ -4,6 +4,7 @@
 */
 //网站令牌，确保所有人是从这里进入的。
 define("TOKEN",true);
+session_start();
 include("config.php");
 include("function.php");
 include("Controller.class.php");

@@ -8,7 +8,7 @@ $_CONFIG["db"]["dbname"]="";
 $_CONFIG["sys"]["timezone"]="Asia/Shanghai";
 $_CONFIG["sys"]["debug"]=true;
 $_CONFIG["sys"]["SQL_log"]=true;
-$_CONFIG["sys"]["visit_log"]=false;
+$_CONFIG["sys"]["visit_log"]=true;
 $_CONFIG["sys"]["log_name_seed"]=20000120;
 
 
