@@ -61,7 +61,7 @@ class User extends Controller{
 			$rel=reg($regData);
 			//累了，歇一歇
 		}
-		
+		echo json_encode($rel);
 		
 	}
 	
@@ -90,6 +90,20 @@ class User extends Controller{
 				$rel=login((int)$_POST['usercode'],$_POST['password']);
 			}
 			
+		}
+		echo json_encode($rel);
+	}
+	
+	public function userinfo(){
+		if(!isset($_GET['acode'])){
+			if(!isset($_SESSION["userData"])){
+				$rel["error"]=3;
+				$rel["data"]="用户未登录时缺乏访问参数。你是……信安专业的同学？？";
+			}else{
+				$rel=get_user_info($_SESSION["userData"]);
+			}
+		}else{
+			$rel=get_user_info($_GET['acode']);
 		}
 		echo json_encode($rel);
 	}

@@ -1,5 +1,4 @@
 <?php
-//include("../Database.class.php");
 /*
 检测账号是否可用
 参数：int $accountCode：账号
@@ -67,7 +66,18 @@ function login(int $accountCode,String $passowrd){
 	return $rel;
 	
 }
-
+/*
+用户注册
+参数：arr $regData：账户信息
+返回：array $rel
+	int $rel["error"]错误代码
+		0：无错误
+		1：数据库连接出错
+		3：未接收到password参数
+	String/bool $rel["data"]
+		String :错误信息
+		bool（true）：注册成功
+*/
 function reg(array $regData){
 	$regData["timeline"]=time();
 	if(!isset($regData["password"])){
@@ -88,8 +98,8 @@ function reg(array $regData){
 		$regData["account_code"]=$num;
 		$db=new Database();
 		//累了，歇一歇
-		$db->query("INSERT INTO ");
-		
+		$rel=$db->query("INSERT INTO `user`(`account_code`, `password`, `email`,  `realname`, `sex`, `study_code`, `profession`, `timeline`) VALUES ('".$regData["account_code"]."','".$regData["password"]."','".$regData["email"]."','".$regData["realname"]."','".$regData["sex"]."','".$regData["study_code"]."','".$regData["profession"]."','".$regData["timeline"]."')");
 	}
+	return $rel;
 }
 ?>
