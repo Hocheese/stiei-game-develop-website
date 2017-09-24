@@ -26,9 +26,9 @@
     <tr>
       <td>?ctrl=user&amp;act=login</td>
       <td>提交登录信息</td>
-		<td><p>POST：usercode 账号</p><p>POST：password密码</p></td>
+		<td><p>POST：usercode 账号</p><p>POST：password密码</p><p>*POST：verCode验证码</p><p>*：如果曾经请求过验证码则需提交该参数</p></td>
       <td><ul><li>类型：json</li>
-      <li>字段：error 错误代码<ul><li>0无错误</li><li>1数据库出错</li><li>2账号不存在</li><li>3密码错误</li><li>4未接收到参数</li></ul></li>
+      <li>字段：error 错误代码<ul><li>0无错误</li><li>1数据库出错</li><li>2账号不存在</li><li>3密码错误</li><li>4未接收到参数</li><li>5未接收到验证码</li></ul></li>
       
 		  <li>字段data：数据<ul>
 		  	<li>当error=0时：一个包含用户信息的json<ul>

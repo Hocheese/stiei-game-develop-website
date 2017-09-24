@@ -5,7 +5,104 @@ if(!defined("TOKEN")){
 	exit("Access Forbidden");
 }
 //include("config.php");
-function output_log($logtype,$info){
+/*
+字符串是否是合法邮箱格式
+参数：String $str 
+返回：bool
+*/
+function is_email(String $str){
+	$i=0;
+	while(($a=substr($str,$i,1))!="@"){
+		if(!is_num_letter($a)&&$a!="_"&&$a!="-"){
+			return false;
+		}
+		$i++;
+	}
+	$i++;
+	if(!is_num_letter(substr($str,$i,1))){
+		return false;
+	}
+	$i++;
+	while($a=substr($str,$i,1)){
+		if(!is_num_letter($a)&&$a!="."&&$a!="-"){
+			return false;
+		}
+		if($a=="."||$a=="-"){
+			$a=substr($str,$i+1,1);
+			if(!$a){
+				return false;
+			}
+			if($a=="."||$a=="-"){
+				return false;
+			}
+		}
+		$i++;
+	}
+	return true;
+}
+/*
+字符串是否全是大写字母
+参数：String $str 
+返回：bool
+*/
+function is_cap_cha(String $str){
+	$i=0;
+	while($a=substr($str,$i,1)){
+		if(ord($a)<65||ord($a)>90){
+			return false;
+		}
+	}
+	return true;
+}
+/*
+字符串是否全是小写字母
+参数：String $str 
+返回：bool
+*/
+function is_low_cha(String $str){
+	$i=0;
+	while($a=substr($str,$i,1)){
+		if(ord($a)<48||ord($a)>57){
+			return false;
+		}
+	}
+	return true;
+}
+/*
+字符串是否全是数字
+参数：String $str 
+返回：bool
+*/
+function is_num_cha(String $str){
+	$i=0;
+	while($a=substr($str,$i,1)){
+		if(ord($a)<97||ord($a)>122){
+			return false;
+		}
+	}
+	return true;
+}
+/*
+字符串是否全是数字、字母
+参数：String $str 
+返回：bool
+*/
+function is_num_letter(String $str){
+	$i=0;
+	while($a=substr($str,$i,1)){
+		if(!is_num_cha($a)&&!is_low_cha($a)&&!is_cap_cha($a)){
+			return false;
+		}
+	}
+	return true;
+}
+/*
+输出日志
+参数：String $logtype 日志类型
+	 String $info    日志内容
+返回：void
+*/
+function output_log(String $logtype,String $info){
 	global $_CONFIG;
 	if(!is_dir("logs")){
 		mkdir("logs");
@@ -13,5 +110,25 @@ function output_log($logtype,$info){
 	$logfile=fopen("logs/".date("Y_m_d_").md5($_CONFIG['sys']["log_name_seed"]).".log.txt","ab");
 	fwrite($logfile,"[".date("H:i:s")."][".$logtype."]".$info."\r\n");
 }
-
+/*
+生成一定长度数字字符串
+参数：int $len 号码长度
+返回：int
+*/
+function rand_num_code(int $len){
+	$num="";
+	while(strlen($num)<$len){
+		$i=rand(0,9);
+		if(strlen($num)==0&&$i==0){
+			$i="";
+		}
+		if(strlen($num)>=2){
+			if(($i-substr($num,-1,1))!=($i-substr($num,-2,1))){
+				$num.=$i;
+			}
+		}
+		
+	}
+	return (int)$num;
+}
 ?>

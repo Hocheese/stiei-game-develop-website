@@ -16,6 +16,11 @@ output_log("通知","访问了测试文件");
 </head>
 
 <body>
+<p><?php
+	echo "PHP版本：".PHP_VERSION."。为了系统能够正常运行，请使用PHP7。";
+	echo 1-true;
+?></p>
+
 <form method="post" action="/?ctrl=user&act=login">
 	<input type="text" name="usercode">
 	<input type="password" name="password">

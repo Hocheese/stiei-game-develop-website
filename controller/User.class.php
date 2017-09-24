@@ -41,11 +41,27 @@ class User extends Controller{
 		imagedestroy($codeImage);
 	}
 	
-	private function confirm_verCode($str){
+	private function confirm_verCode(String $str){
 		return strtolower($str)==strtolower($_SESSION['verCode']);
 	}
 	
 	public function reg(){
+		
+		if(!isset($_POST["password"])){
+			$rel["error"]=4;
+			$rel["data"]="未接收到必须的password参数。你是……信安专业的同学？？";
+		}else{
+			$regData["password"]=$_POST["password"];
+			$regData["email"]=isset($_POST["email"])?$_POST["email"]:"";
+			$regData["realname"]=isset($_POST["realname"])?$_POST["realname"]:"佚名";
+			$regData["sex"]=isset($_POST["sex"])?$_POST["sex"]:0;
+			$regData["study_code"]=isset($_POST["study_code"])?$_POST["study_code"]:0;
+			$regData["profession"]=isset($_POST["profession"])?$_POST["profession"]:0;
+			
+			$rel=reg($regData);
+			//累了，歇一歇
+		}
+		
 		
 	}
 	
@@ -55,7 +71,25 @@ class User extends Controller{
 			$rel["error"]=4;
 			$rel["data"]="未接收到提交的参数。你是……信安专业的同学？？";
 		}else{
-			$rel=login((int)$_POST['usercode'],$_POST['password']);
+			if(isset($_SESSION['verCode']) ){
+				if(!isset($_POST['verCode'])){
+					$rel["error"]=4;
+					$rel["data"]="未接收到验证码。你是……信安专业的同学？？";
+				}else{
+					if(!$this->confirm_verCode($_POST['verCode'])){
+						$rel["error"]=5;
+						$rel["data"]="验证码错误！你是……服务器的同类？";
+					}else{
+						unset($_SESSION['verCode']);
+						$rel=login((int)$_POST['usercode'],$_POST['password']);
+						
+					}
+				}
+				
+			}else{
+				$rel=login((int)$_POST['usercode'],$_POST['password']);
+			}
+			
 		}
 		echo json_encode($rel);
 	}
