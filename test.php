@@ -6,7 +6,9 @@ include("function.php");
 include("Tpl.class.php");
 output_log("通知","访问了测试文件");
 //test start
-
+$test[0]=5;
+$test[2]=10;
+echo json_encode($test);
 ?>
 <!doctype html>
 <html>

@@ -5,6 +5,18 @@ if(!defined("TOKEN")){
 	exit("Access Forbidden");
 }
 //include("config.php");
+
+/*
+在数组中查找。主要用于查询结果
+*/
+function arr_search(array $arr,String $key,$value){
+	foreach($arr as $v){
+		if(isset($v[$key])&&$v[$key]==$value){
+			return $v;
+		}
+	}
+	return false;
+}
 /*
 字符串是否是合法邮箱格式
 参数：String $str 

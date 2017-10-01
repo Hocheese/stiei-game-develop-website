@@ -10,6 +10,39 @@ function account_code_available(int $num){
 	return $rel["error"]==2;
 }
 /*
+获取二级学院列表
+参数：无
+返回：array $rel
+	int $rel["error"]错误代码
+		0：无错误
+		1：数据库连接出错
+		2：数据库为空
+	String/array $rel["data"]
+		String :错误信息
+		array：二级学院列表
+*/
+function get_col_list(){
+	$db=new Database();
+	return $college=$db->query("SELECT * FROM `sys_profession` ORDER BY `college` ");
+	
+}
+/*
+获取专业列表
+参数：无
+返回：array $rel
+	int $rel["error"]错误代码
+		0：无错误
+		1：数据库连接出错
+		2：数据库为空
+	String/array $rel["data"]
+		String :错误信息
+		array：专业列表
+*/
+function get_pro_list(){
+	$db=new Database();
+	return $db->query("SELECT * FROM `sys_profession` ORDER BY `college`");
+}
+/*
 获取用户信息
 参数：int $accountCode：账号
 返回：array $rel

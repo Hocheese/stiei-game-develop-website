@@ -28,6 +28,7 @@ class Database{
 		if($_CONFIG["sys"]["debug"]&&$_CONFIG["sys"]["SQL_log"]){
 			output_log("SQL","执行SQL语句：".$sql);
 		}
+		$this->dbresource->query("set names utf8");
 		$dbrel=$this->dbresource->query($sql);
 		$relData;
 		$relData["error"]=0;

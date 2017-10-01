@@ -99,10 +99,24 @@
       </ul></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>?ctrl=user&amp;act=prolist</td>
+      <td>获取二级学院与专业列表</td>
+      <td>无</td>
+      <td><ul>
+      	<li>类型：JSON</li>
+      	<li>字段：int error 错误代码。可能的值：<ul>
+      		<li>0：无错误</li>
+      		<li>1：数据库出错</li>
+      		<li>2：数据库没有数据</li>
+      	</ul></li>
+      	<li>字段：json/String data 结果。可能的值：<ul>
+      		<li>json：仅error=0时。二级学院与数据列表。结构：
+      		<ul>
+      			<li>{"error":0,"college":{"1":{"name":"二级学院名","pro":[{"id":"2","name":"专业名"}]}}}</li>
+      		</ul></li>
+      		<li>String：仅error!=0时。一段错误信息。</li>
+      	</ul></li>
+      </ul></td>
     </tr>
     <tr>
       <td>&nbsp;</td>

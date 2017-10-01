@@ -94,6 +94,48 @@ class User extends Controller{
 		echo json_encode($rel);
 	}
 	
+	public function prolist(){
+		$prolist=get_col_list();
+		if($prolist['error']!=0){
+			$rel=$prolist;
+		}else{
+			$rel['error']=0;
+			foreach($prolist['data'] as $v){
+				$cid=$v['college'];
+				$id=$v['id'];
+				if($cid==0){
+					;
+					$rel['college'][$id]['name']=$v["name"];
+					
+				}else{
+					if(isset($rel['college'][$cid])){
+						$rel['college'][$cid]['pro']=array();
+						$i=count($rel['college'][$cid]['pro']);
+						$rel['college'][$cid]['pro'][$i]['id']=$id;
+						$rel['college'][$cid]['pro'][$i]['name']=$v["name"];
+					}else{
+						$rel['college'][0]['name']="学院直辖专业";
+						$i=count($rel['college'][0]['pro']);
+						$rel['college'][0]['pro'][$i]['id']=$id;
+						$rel['college'][0]['pro'][$i]['name']=$v["name"];
+					}
+				}
+			}
+			/*$collist=get_col_list();
+			if($collist["error"]!=0){
+				$rel["error"]=$collist["error"];
+				$rel["data"][0]["name"]="上海电子信息职业技术学院";
+				$rel["data"][0]=$collist["data"];
+			}else{
+				foreach($prolist["data"] as $key=>$value){
+					$cid=$value["college"];
+					if(isset($collist["data"][])){}
+				}
+			}*/
+		}
+		echo json_encode($rel);
+	}
+	
 	public function userinfo(){
 		if(!isset($_GET['acode'])){
 			if(!isset($_SESSION["userData"])){
