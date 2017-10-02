@@ -43,6 +43,30 @@ function get_pro_list(){
 	return $db->query("SELECT * FROM `sys_profession` ORDER BY `college`");
 }
 /*
+获取本月签到信息
+*/
+function get_punchin_mouth(int $accountCode){
+	$db=new Database();
+	$rel=$db->query("SELECT * FROM `user_punchin_month` WHERE `ucode`=".$accountCode." AND `date`<".date("t"));
+	if($rel["error"]==0){
+		foreach($rel["data"] as &$v){
+			$v["ispunch"]=$v['date']%2==$v['ispunch']?true:false;
+		}
+		unset($v);
+	}
+	
+	
+	return $rel;
+}
+/*
+获取各月签到次数
+*/
+function get_punchin_times(int $accountCode){
+	$db=new Database();
+	$rel=$db->query("SELECT * FROM `user_punchin_times` WHERE `ucode`=".$accountCode);
+	return $rel;
+}
+/*
 获取用户信息
 参数：int $accountCode：账号
 返回：array $rel
@@ -98,6 +122,89 @@ function login(int $accountCode,String $passowrd){
 	}
 	return $rel;
 	
+}
+/*
+用户签到
+参数：int $accountCode：账号
+返回：array $rel
+	int $rel["error"]错误代码
+		0：无错误
+		1：数据库连接出错
+		3：已经签到过
+	String $rel["data"]
+		String :错误信息
+*/
+function punchin(int $accountCode){
+	$today=date("j");
+	$tomonth=date("n");
+	$toyear=date("Y");
+	$db=new Database();
+	$dbrel=$db->query("SELECT * FROM `user_punchin_month` WHERE `ucode`=".$accountCode." AND `date`=".$today);
+	if($dbrel["error"]==0){
+		if($dbrel["data"][0]['date']%2==$dbrel["data"][0]['ispunch']){
+			$rel["error"]=3;
+			$rel["data"]="你已经签到过了";
+		}else{
+			$udtrel=$db->query("UPDATE `user_punchin_month` SET `ispunch`=".(1-$dbrel["data"][0]['ispunch'])." WHERE `ucode`=".$accountCode." AND `date`=".$today);
+			if($udtrel["error"]==0){
+				$timesRel=$db->query("SELECT * FROM `user_punchin_times` WHERE `ucode`=".$accountCode." AND `year`=".$toyear." AND `month`=".$tomonth);
+				if($timesRel["error"]==0){
+					$timesUrel=$db->query("UPDATE `user_punchin_times` SET `times`=".($timesRel["data"][0]["times"]+1)." WHERE `ucode`=".$accountCode." AND `year`=".$toyear." AND `month`=".$tomonth);
+					if($timesUrel["error"]==0){
+						$rel["error"]=0;
+						$rel["data"]="签到成功";
+					}else{
+						$rel=$timesUrel;
+					}
+				}elseif($udtrel["error"]==2){
+					$timeIsrtRel=$db->query("INSERT INTO `user_punchin_times`(`ucode`, `year`, `month`, `times`) VALUES (".$accountCode.",".$toyear.",".$tomonth.",1)");
+					if($timeIsrtRel["error"]==0){
+						$rel["error"]=0;
+						$rel["data"]="签到成功";
+					}else{
+						$rel=$timeIsrtRel;
+					}
+				}else{
+					$rel=$timesRel;
+				}
+					
+				
+			
+			}else{
+				$rel=$udtrel;
+			}
+			
+			
+		}
+	}elseif($dbrel["error"]==2){
+		$istrel=$db->query("INSERT INTO `user_punchin_month`(`ucode`, `date`, `ispunch`) VALUES ('".$accountCode."',".$today.",".($dbrel["data"][0]['date']%2).")");
+		if($istrel["error"]==0){
+			$timesRel=$db->query("SELECT * FROM `user_punchin_times` WHERE `ucode`=".$accountCode." AND `year`=".$toyear." AND `month`=".$tomonth);
+				if($timesRel["error"]==0){
+					$timesUrel=$db->query("UPDATE `user_punchin_times` SET `times`=".($timesRel["data"][0]["times"]+1)." WHERE `ucode`=".$accountCode." AND `year`=".$toyear." AND `month`=".$tomonth);
+					if($timesUrel["error"]==0){
+						$rel["error"]=0;
+						$rel["data"]="签到成功";
+					}else{
+						$rel=$timesUrel;
+					}
+				}elseif($udtrel["error"]==2){
+					$timeIsrtRel=$db->query("INSERT INTO `user_punchin_times`(`ucode`, `year`, `month`, `times`) VALUES (".$accountCode.",".$toyear.",".$tomonth.",1)");
+					if($timeIsrtRel["error"]==0){
+						$rel["error"]=0;
+						$rel["data"]="签到成功";
+					}else{
+						$rel=$timeIsrtRel;
+					}
+				}else{
+					$rel=$timesRel;
+				}
+		}else{
+			$rel=$istrel;
+		}
+		
+	}
+	return $rel;
 }
 /*
 用户注册

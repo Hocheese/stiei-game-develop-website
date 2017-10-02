@@ -94,6 +94,8 @@ class User extends Controller{
 		echo json_encode($rel);
 	}
 	
+	
+	
 	public function prolist(){
 		$prolist=get_col_list();
 		if($prolist['error']!=0){
@@ -121,19 +123,23 @@ class User extends Controller{
 					}
 				}
 			}
-			/*$collist=get_col_list();
-			if($collist["error"]!=0){
-				$rel["error"]=$collist["error"];
-				$rel["data"][0]["name"]="上海电子信息职业技术学院";
-				$rel["data"][0]=$collist["data"];
-			}else{
-				foreach($prolist["data"] as $key=>$value){
-					$cid=$value["college"];
-					if(isset($collist["data"][])){}
-				}
-			}*/
+
 		}
 		echo json_encode($rel);
+	}
+	
+	public function punchin(){
+		if(!isset($_SESSION["userData"])){
+			$rel['error']=4;
+			$rel["data"]="用户未登录";
+		}else{
+			$rel=punchin($_SESSION["userData"]["account_code"]);
+		}
+		echo json_encode($rel);
+	}
+	
+	public function punchinfo(){
+		
 	}
 	
 	public function userinfo(){
@@ -149,5 +155,7 @@ class User extends Controller{
 		}
 		echo json_encode($rel);
 	}
+	
+	
 }
 ?>

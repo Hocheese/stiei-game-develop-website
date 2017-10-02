@@ -18,6 +18,20 @@ function arr_search(array $arr,String $key,$value){
 	return false;
 }
 /*
+获取指定月份的天数。默认为本月。废弃。
+*/
+function day_of_month(int $month=0){
+	if($month==0){
+		return date("t");
+	}elseif($month==2){
+		return 28;
+	}elseif($month<8){
+		return $month%2==0?30:31;
+	}else{
+		return $month%2==0?31:30;
+	}
+}
+/*
 字符串是否是合法邮箱格式
 参数：String $str 
 返回：bool

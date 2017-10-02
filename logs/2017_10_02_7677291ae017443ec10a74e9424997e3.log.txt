@@ -1,0 +1,2 @@
+[12:32:16][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:06:12][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 

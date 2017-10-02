@@ -16,7 +16,7 @@
     </tr>
     
     <tr>
-      <td colspan="4"  align="center">表sys_profession</td>
+      <td colspan="4"  align="center"><h1>表sys_profession</h1>二级学院与专业列表</td>
     </tr>
     <tr>
       <td>id</td>
@@ -35,7 +35,7 @@
     </tr>
     
     <tr>
-      <td colspan="4" align="center">表user</td>
+      <td colspan="4" align="center"><h1>表user</h1>用户信息表</td>
     </tr>
     <tr>
       <td>id</td>
@@ -95,50 +95,48 @@
     
     
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td colspan="4"  align="center"><h1>表user_punchin_month</h1>本月用户签到表</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>ucode</td>
+      <td>int</td>
+      <td>用户账号</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>date</td>
+      <td>int</td>
+      <td>表示本月的一个日期。0——31之间</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>ispunch</td>
+      <td>int</td>
+      <td>值为0,1。表示本月是否签到。当月份为奇数时，1表示已经签到。当月份为偶数时，0表示已经签到。(当date mod 2=ispunch时表示已经签到)</td>
+    </tr>
+    
+    <tr>
+      <td colspan="4"  align="center"><h1>表user_punchin_times</h1>各月用户签到次数表</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>ucode</td>
+      <td>int</td>
+      <td>用户账号</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>year</td>
+      <td>int</td>
+      <td>年份</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>month</td>
+      <td>int</td>
+      <td>月份</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>times</td>
+      <td>int</td>
+      <td>签到次数</td>
     </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+    
     <tr>
       <td></td>
       <td></td>
