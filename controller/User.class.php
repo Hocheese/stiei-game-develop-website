@@ -1,6 +1,11 @@
 <?php
 include("model/user.php");
 class User extends Controller{
+	public static function index(){
+		if(!isset($_SESSION["userData"])){
+			include("tpl/crew_login.html");
+		}
+	}
 	public function vcode(){
 		header("Content-Type:image/png");
 		$i=0;
@@ -139,7 +144,7 @@ class User extends Controller{
 	}
 	
 	public function punchinfo(){
-		
+		$class=isset($_GET["class"])?$_GET["class"]:"month";
 	}
 	
 	public function userinfo(){

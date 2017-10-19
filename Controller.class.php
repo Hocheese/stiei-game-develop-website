@@ -10,7 +10,9 @@ class Controller{
 		
 	}
 	static function index(){
-		
+		if(!isset($_SESSION["userData"])){
+			include("tpl/index.html");
+		}
 	}
 	function __call($name,$arguments){
 		

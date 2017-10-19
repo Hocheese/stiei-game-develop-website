@@ -1,0 +1,165 @@
+/* index.html */
+#index_bar {
+	width : 805px;
+	margin : auto;
+	margin-top : 350px;
+}
+
+#dian_Ci {
+	color : #fff;
+	font-size : 32px;
+}
+
+#crewLogin {
+	display : none;
+}
+
+#tourLogin {
+	display : none;
+}
+
+/* crew_login.html */
+#crew_bar {
+	width : 1300px;
+	height : 500px;
+	/* background-color : rebeccapurple; */
+	border: 1px solid #000;
+	margin : auto;
+	margin-top : 150px;
+}
+
+#crew_tit {
+	width : 1200px;
+	height : 25px;
+	margin : auto;
+	margin-top : 10px;
+	border-bottom : 1px solid #DCDCDC;
+}
+
+#_tit {
+	width : 190px;
+	height : 45px;
+	margin : auto;
+	font-size : 36px;
+	text-align : center;
+	display : block;
+	background-color : #FFF;
+}
+
+#_login {
+	width : 600px;
+	height : 300px;
+	margin-left : 50px;
+	margin-top : 50px;
+	/* border: 1px solid #000; */
+	border-right : 1px solid #DCDCDC;
+	float : left;
+	display : inline;
+}
+
+.user_s {
+	width : 350px;
+	height : 30px;
+	font-size : 16px;
+	margin-top : 30px;
+	margin-left : 20px;
+	border : 1px solid #FA237D;
+	border-radius : 5px;
+	line-height : 10px;
+	text-indent : 10px;
+}
+
+#u_prompt {
+	font-size : 14px;
+	color : #FA237D;
+	margin-left : 10px;
+}
+
+.pwd_s {
+	width : 350px;
+	height : 30px;
+	font-size : 16px;
+	margin-top : 30px;
+	margin-left : 20px;
+	border : 1px solid #FA237D;
+	border-radius : 5px;
+	line-height : 10px;
+	text-indent : 10px;
+	/* float : left; */
+}
+
+#s_prompt {
+	font-size : 14px;
+	color : #FA237D;
+	margin-left : 10px;
+	/* display : none; */
+}
+
+#_verif {
+	width : 350px;
+	height : 40px;
+	margin-top : 30px;
+	margin-left : 20px;
+	/* border-radius : 30px; */
+}
+
+#_reme {
+	width : 260px;
+	height : 50px;
+	margin-left : 20px;
+	margin-top : 30px;
+}
+
+#font_reme {
+	font-size : 14px;
+	color : #FA237D;
+	margin-left : 150px;
+	line-height : 45px;
+	display : block;
+}
+
+#_qr {
+	width : 600px;
+	height : 300px;
+	/* margin-left : 50%; */
+	margin-top : 50px;
+	/* border: 1px solid #000; */
+	border-left : 1px solid #DCDCDC;
+	display : inline;
+	float : left;
+}
+
+#l_button {
+	width : 220px;
+	height : 40px;
+	font-size : 18px;
+	display : block;
+	text-align : center;
+	text-decoration : none;
+	color : #FFF;
+	margin-left : 20px;
+	margin-top : 30px;
+	float : left;
+	display : inline;
+	border : 1px solid darkgray;
+	border-radius : 10px;
+	background-color : cornflowerblue;
+	line-height : 40px;
+}
+
+#r_button {
+	width : 220px;
+	height : 40px;
+	font-size : 18px;
+	display : block;
+	text-align : center;
+	text-decoration : none;
+	color : #000;
+	margin-left : 40px;
+	margin-top : 30px;
+	float : left;
+	display : inline;
+	border : 1px solid darkgray;
+	border-radius : 10px;
+	line-height : 40px;
+}

@@ -1,0 +1,25 @@
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity : 0;
+    }
+    50% {
+        opacity : 0.5;
+    }
+    100% {
+        opacity : 1;
+    }
+}
+
+#bac {
+    -webkit-animation-name : fadeIn;
+    -webkit-animation-duration : 8s;
+    -webkit-animation-iteration-count : 1;
+    -webkit-animation-delay : 0s;
+}
+
+#crewLogin, #tourLogin {
+    -webkit-animation-name : fadeIn;
+    -webkit-animation-duration : 4s;
+    -webkit-animation-iteration-count : 1;
+    -webkit-animation-delay : 0s;
+}

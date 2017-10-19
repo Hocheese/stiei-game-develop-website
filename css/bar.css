@@ -1,0 +1,17 @@
+.lanren {
+    width : 800px;
+    border : 1px solid #fff;
+    height : 25px;
+    /* margin : 450px auto; */
+}
+
+#bar {
+    display : block;
+    background-color : mediumpurple;
+    float : left;
+    height : 100%;
+    text-align : center;
+    line-height : 25px;
+    color : #FFF;
+    opacity : 0.7;
+}

@@ -1,0 +1,1 @@
+[09:33:03][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 

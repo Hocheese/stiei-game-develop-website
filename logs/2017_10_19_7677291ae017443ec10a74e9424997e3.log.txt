@@ -1,0 +1,34 @@
+[15:32:52][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:32:52][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT 0 ,1
+[15:33:32][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:33:32][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT -1 ,1
+[15:33:32][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1 ,1' at line 1
+[15:34:38][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:34:38][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT 0 ,1
+[15:34:54][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:34:54][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT -1 ,1
+[15:34:54][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1 ,1' at line 1
+[15:36:11][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:36:11][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT -1 ,1
+[15:36:11][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1 ,1' at line 1
+[15:36:11][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:36:11][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT -1 ,1
+[15:36:11][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1 ,1' at line 1
+[15:38:47][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:38:47][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT -1 ,1
+[15:38:47][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1 ,1' at line 1
+[15:39:42][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:39:42][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT -1 ,1
+[15:39:42][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1 ,1' at line 1
+[15:43:33][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:43:33][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT -1 ,1
+[15:43:33][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1 ,1' at line 1
+[15:43:55][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:43:55][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT -1 ,1
+[15:43:55][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1 ,1' at line 1
+[15:44:51][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:44:51][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT 0 ,1
+[15:48:47][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:48:47][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT 0 ,1
+[15:48:55][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[15:48:55][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT 0 ,1

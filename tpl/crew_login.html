@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>游戏开发社</title>
+        <meta charset = "utf-8">
+        <!-- <link rel = "stylesheet" type = "text/css" href = "./css/kan_Ban.css" /> -->
+        <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+        <link rel = "stylesheet" type = "text/css" href = "../css/buttons.css" />
+        <link rel = "stylesheet" type = "text/css" href = "../css/unlock.css" />
+        <link rel = "stylesheet" type = "text/css" href = "../css/remember.css" />
+        <link rel = "shortcut icon" type = "image/x-icon" href = "../img/dimension.ico" />
+        <!-- <link rel = "stylesheet" type = "text/css" href = "../css/zzsc-demo.css" /> -->
+    </head>
+    <body>
+        <div id = "crew_bar">
+            <div id = "crew_tit">
+                <span id = "_tit"><b>上舰认证</b></span>
+            </div>
+            <div id = "_login">
+                <form method = "POST" action = "#">
+                    <input type = "text" placeholder = "输入你的ID/邮箱" id = "_user" class = "user_s" value = "" /><span id = "u_prompt">QAQ~还没认证不能上舰哦~</span><br />
+                    <input type = "password" placeholder = "密码" id = "_pwd" class = "pwd_s" value = "" /><span id = "s_prompt" style = "display : none;">是不是有些东西还没输入呢~</span><br />
+                    <div id = "_verif"></div>
+                    <div id = "_reme">
+                        <input type="checkbox" id="check">
+                        <label for="check" class="loadcheck" id="loadcheck" onmousedown = "Reme();">
+                            <span class = "entypo-cancel"></span>
+                            <span class = "load"></span>
+                            <span class = "load"></span>
+                            <span class = "load"></span>
+                            <span class = "load"></span>
+                            <span class = "load"></span>
+                            <span class = "entypo-check"></span>
+                        </label>
+                        <span id = "font_reme">想让我记住你么~</span>
+                    </div>
+                    <a href = "#" id = "l_button">登陆</a>
+                    <a href = "#" id = "r_button">注册</a>
+                </form>
+            </div>
+            <div id = "_qr">
+                <h1>QRCode</h1>
+            </div>
+        </div>
+        <script src = "../jq/jquery-1.11.0.min.js"></script>
+        <script src = "../jq/jquery.thoughtBubble.js"></script>
+        <script src = "../js/slide.js"></script>
+        <script src = "../js/onMous.js"></script>
+        <script src = "../js/slide_val.js"></script>
+    </body>
+</html>
