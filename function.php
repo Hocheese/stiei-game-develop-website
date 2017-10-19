@@ -31,6 +31,7 @@ function day_of_month(int $month=0){
 		return $month%2==0?31:30;
 	}
 }
+
 /*
 字符串是否是合法邮箱格式
 参数：String $str 
@@ -156,5 +157,27 @@ function rand_num_code(int $len){
 		
 	}
 	return (int)$num;
+}
+/*
+生成指定长度的随机字符串（邀请码）
+*/
+function randStr(int $len){
+	$str="";
+	while(strlen($str)<$len){
+		$a=rand();
+		switch($a%3){
+			case 0:
+				$str.=rand(0,9);
+				break;
+			case 1:
+				$str.=chr(rand(65,90));
+				break;
+			case 2:
+				$str.=chr(rand(97,122));
+				break;
+		}
+	}
+	return $str;
+	
 }
 ?>
