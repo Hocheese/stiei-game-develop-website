@@ -8,11 +8,23 @@
         <link rel = "stylesheet" type = "text/css" href = "../css/buttons.css" />
         <link rel = "stylesheet" type = "text/css" href = "../css/unlock.css" />
         <link rel = "stylesheet" type = "text/css" href = "../css/remember.css" />
+        <link rel = "stylesheet" type = "text/css" href = "../css/general.css" />
         <link rel = "shortcut icon" type = "image/x-icon" href = "../img/dimension.ico" />
         <!-- <link rel = "stylesheet" type = "text/css" href = "../css/zzsc-demo.css" /> -->
     </head>
     <body>
+        <div class = "img_top">
+            <img src = "../img/top.png" />
+        </div>
         <div id = "crew_bar">
+            <div id = "_menu">
+                <span id = "menu_1"><b>这</b></span>
+                <span id = "menu_2"><b>只</b></span>
+                <span id = "menu_3"><b>是</b></span>
+                <span id = "menu_4"><b>个</b></span>
+                <span id = "menu_5"><b>彩</b></span>
+                <span id = "menu_6"><b>蛋</b></span>
+            </div>
             <div id = "crew_tit">
                 <span id = "_tit"><b>上舰认证</b></span>
             </div>
@@ -22,17 +34,12 @@
                     <input type = "password" placeholder = "密码" id = "_pwd" class = "pwd_s" value = "" /><span id = "s_prompt" style = "display : none;">是不是有些东西还没输入呢~</span><br />
                     <div id = "_verif"></div>
                     <div id = "_reme">
-                        <input type="checkbox" id="check">
-                        <label for="check" class="loadcheck" id="loadcheck" onmousedown = "Reme();">
-                            <span class = "entypo-cancel"></span>
-                            <span class = "load"></span>
-                            <span class = "load"></span>
-                            <span class = "load"></span>
-                            <span class = "load"></span>
-                            <span class = "load"></span>
-                            <span class = "entypo-check"></span>
+                        <label>
+                            <span id = "chec_reme">记住我</span>
+                            <input type="checkbox" id = "_chec" name = "_chec" />
                         </label>
-                        <span id = "font_reme">想让我记住你么~</span>
+                        <span id = "_por">如果不是自己电脑, 一定要勾选哦~滑稽</span>
+                        <span id = "_forget"><a id = "a_forget" href = "#">忘记<spam class = "_cover" title = "我们仍未知道那天所看见的花的名字">面码</spam>(密码)</a></span>
                     </div>
                     <a href = "#" id = "l_button">登陆</a>
                     <a href = "#" id = "r_button">注册</a>
@@ -42,10 +49,44 @@
                 <h1>QRCode</h1>
             </div>
         </div>
+        <div id = "crew_links">
+            <div class = "_cent">
+                <div class = "l_links">
+                    <span class = "rel_link">游戏开发社</span>
+                    <span class = "rel_on"><a href = "#" class = "rel_a">关于我们</a></span>
+                    <span class = "rel_on"><a href = "#" class = "rel_a">友情链接</a></span>
+                    <span class = "rel_on"><a href = "#" class = "rel_a">合作伙伴</a></span>
+                    <span class = "rel_un"><a href = "#" class = "rel_a">联系我们</a></span>
+                    <span class = "rel_un"><a href = "#" class = "rel_a">加入我们</a></span>
+                </div>
+                <div class = "l_links" style = "border-left : 1px solid #DCDCDC;">
+                    <span class = "rel_link">传送</span>
+                    <span class = "rel_on"><a href = "#" class = "rel_a">帮助中心</a></span>
+                    <span class = "rel_on"><a href = "#" class = "rel_a">活动中心</a></span>
+                    <span class = "rel_on"><a href = "#" class = "rel_a">开发比赛</a></span>
+                    <span class = "rel_in"><a href = "#" class = "rel_a">游戏比赛</a></span>
+                    <span class = "rel_in"><a href = "#" class = "rel_a">游戏美术</a></span>
+                    <span class = "rel_in"><a href = "#" class = "rel_a">HelloWorld</a></span>
+                    <span class = "rel_un"><a href = "#" class = "rel_a">纪念馆</a></span>
+                    <span class = "rel_un"><a href = "#" class = "rel_a">反馈中心</a></span>
+                </div>
+                <div class = "l_links" style = "border-left : 1px solid #DCDCDC;">
+                    <span class = "rel_link">FristD</span>
+                    <span class = "rel_on"><a href = "#" class = "rel_a">加入<span class  = "fri_cover">工作室</span></a></span>
+                    <span class = "rel_on"><a href = "#" class = "rel_a"><span class  = "fri_cover">面试</span>相关</a></span>
+                    <span class = "rel_on"><a href = "#" class = "rel_a"><span class  = "fri_cover">工作室</span>介绍</a></span>
+                </div>
+            </div>
+            <div class = "web_info">
+                <span class = "ser_info">互联网ICP备案：皖ICP备16017939号-3</span>
+                <span class = "ser_info">版权所属：@<a href = "https://fristd.com">FristD</a></span>
+            </div>
+        </div>
         <script src = "../jq/jquery-1.11.0.min.js"></script>
         <script src = "../jq/jquery.thoughtBubble.js"></script>
         <script src = "../js/slide.js"></script>
-        <script src = "../js/onMous.js"></script>
+        <!-- <script src = "../js/onMous.js"></script> -->
         <script src = "../js/slide_val.js"></script>
+        <script src = "../js/menu.js"></script>
     </body>
 </html>

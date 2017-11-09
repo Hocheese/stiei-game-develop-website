@@ -8,16 +8,19 @@
         <link rel = "stylesheet" type = "text/css" href = "./css/bar.css" />
         <link rel = "stylesheet" type = "text/css" href = "./css/buttons.css" />
         <link rel = "stylesheet" type = "text/css" href = "./css/background.css" />
-        <link rel = "shortcut icon" type = "image/x-icon" href = "../img/dimension.ico" />
-        <script src = "./js/jquery-3.2.1.js"></script>
-        <script src = "./js/jquery.thoughtBubble.js"></script>
-        <script src = "./js/jqmeter.min.js"></script>
-        <script src = "./js/three.min.js"></script>
+        <link rel = "shortcut icon" type = "image/x-icon" href = "./img/dimension.ico" />
+        <link rel = "stylesheet" type = "text/css" href = "./css/general.css" />
+        <script src = "./jq/jquery-3.2.1.js"></script>
+        <script src = "./jq/jquery.thoughtBubble.js"></script>
+        <script src = "./jq/jqmeter.min.js"></script>
+        <script src = "./jq/three.min.js"></script>
+        <script src = "./jq/por.js"></script>
+        
         <style>
-            /* #bac {
-                background-image : url(./img/bj2.jpg);
+            body {
+                background : url(./img/bj4.jpg);
                 background-size : cover;
-            } */
+            }
         </style>
     </head>
     <body id = "bac">
@@ -28,13 +31,27 @@
             </div>
             <!-- <a href = "#" id = "crewLogin">舰员登舰</a> -->
             <span id = "crewLogin">
-                <a href="?ctrl=user" class="button button-3d button-primary button-rounded">舰员登舰</a>
+                <a href="/?ctrl=user" class="button button-3d button-primary button-rounded">舰员登舰</a>
             </span>
             <!-- <a href = "#" id = "tourLogin">游客登舰 </a> -->
             <span id = "tourLogin">
                 <a href="#" class="button button-3d button-primary button-rounded">上舰参观</a>
             </span>
         </div>
+        <!-- <canvas>
+            <script type="text/javascript" src="ye_ske.json"></script>
+        </canvas> -->
+        <div id = "_menu">
+                <span id = "menu_1"><b>这</b></span>
+                <span id = "menu_2"><b>只</b></span>
+                <span id = "menu_3"><b>是</b></span>
+                <span id = "menu_4"><b>个</b></span>
+                <span id = "menu_5"><b>彩</b></span>
+                <span id = "menu_6"><b>蛋</b></span>
+        </div>
         <script src = "./js/bar.js"></script>
+        <script src = "./js/menu.js"></script>
+        
+        <!-- /* <script type="text/javascript" src="ye_tex.json"></script> */ -->
     </body>
 </html>

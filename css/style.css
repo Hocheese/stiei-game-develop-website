@@ -1,3 +1,11 @@
+body {
+	margin : auto;
+}
+
+a {
+	text-decoration : none;
+}
+
 /* index.html */
 #index_bar {
 	width : 805px;
@@ -19,13 +27,19 @@
 }
 
 /* crew_login.html */
+.img_top {
+	width : 100%;
+	height : 100px;
+	margin : auto;
+}
+
 #crew_bar {
 	width : 1300px;
 	height : 500px;
 	/* background-color : rebeccapurple; */
-	border: 1px solid #000;
+	/* border: 1px solid #000; */
 	margin : auto;
-	margin-top : 150px;
+	margin-top : 50px;
 }
 
 #crew_tit {
@@ -104,11 +118,34 @@
 }
 
 #_reme {
-	width : 260px;
-	height : 50px;
+	width : 500px;
+	height : 30px;
 	margin-left : 20px;
-	margin-top : 30px;
+	margin-top : 45px;
 }
+
+#chec_reme {
+	font-size : 16px;
+	color : cornflowerblue;
+	display : inline;
+	float : left;
+}
+
+#_chec {
+	width : 15px;
+	height : 15px;
+	display : inline;
+	float : left;
+}
+
+#_por {
+	font-size : 16px;
+	color : darkgray;
+	display : inline;
+	float : left;
+	margin-left : 10px;
+}
+
 
 #font_reme {
 	font-size : 14px;
@@ -118,15 +155,16 @@
 	display : block;
 }
 
-#_qr {
-	width : 600px;
-	height : 300px;
-	/* margin-left : 50%; */
-	margin-top : 50px;
-	/* border: 1px solid #000; */
-	border-left : 1px solid #DCDCDC;
+#_forget {
+	font-size : 16px;
 	display : inline;
 	float : left;
+	margin-left : 30px;
+}
+
+#a_forget {
+	text-decoration : none;
+	color : cornflowerblue;
 }
 
 #l_button {
@@ -138,7 +176,7 @@
 	text-decoration : none;
 	color : #FFF;
 	margin-left : 20px;
-	margin-top : 30px;
+	margin-top : 15px;
 	float : left;
 	display : inline;
 	border : 1px solid darkgray;
@@ -156,10 +194,150 @@
 	text-decoration : none;
 	color : #000;
 	margin-left : 40px;
-	margin-top : 30px;
+	margin-top : 15px;
 	float : left;
 	display : inline;
 	border : 1px solid darkgray;
 	border-radius : 10px;
 	line-height : 40px;
+}
+
+#_qr {
+	width : 600px;
+	height : 300px;
+	/* margin-left : 50%; */
+	margin-top : 50px;
+	/* border: 1px solid #000; */
+	border-left : 1px solid #DCDCDC;
+	display : inline;
+	float : left;
+}
+
+/* main.html */
+#_main {
+	width : 100%;
+	height : 100%;
+	margin : auto;
+}
+
+nav {
+	width : 200px;
+	height : 500px;
+	margin-top : auto;
+	display : inline;
+	float : left;
+}
+
+.nav_li {
+	width : 150px;
+	height : 150px;
+	border-radius : 100px;
+	border : 3px solid #666666;
+	margin-top : 20px;
+	list-style-type : none;
+	padding : 0;
+	background-color : cornflowerblue;
+}
+
+.nav_font {
+	width : 150px;
+	height : 50px;
+	display : block;
+	text-align : center;
+	font-size : 42px;
+	font-family : '幼圆';
+	margin-top : 40px;
+	color : #fff;
+}
+
+.main_cent {
+	width : 85%;
+	height : 900px;
+	/* background-color : red; */
+	display : inline;
+	float : left;
+	margin-top : 30px;
+	margin-left : 30px;
+	border-left : 2px solid #DCDCDC;
+	border-top : 2px solid #DCDCDC;
+	border-right : 5px solid #666666;
+	border-bottom : 5px solid #666666;
+}
+
+.main_li_div {
+	width : 50%;
+	height : 200px;
+	display : inline;
+	float : left;
+}
+
+.main_li {
+	width : 100%;
+	height : 30px;
+	border-bottom : 1px solid #dcdcdc;
+	list-style-type : none;
+	color : #000;
+}
+
+/* active.html */
+._active {
+	width : 65%;
+	height : 870px;
+	margin-left : 50px;
+	margin-top : 10px;
+	display : inline;
+	float : left;
+	overflow-y:scroll;
+}
+
+#tit_active {
+	width : 20%;
+	height : 80px;
+	display : block;
+	font-size : 50px;
+	margin-top : 50px;
+	margin-left : 20px;
+}
+
+.a_active {
+	width : 100%;
+	height : 50px;
+	display : block;
+	color : cornflowerblue;
+	font-size : 36px;
+}
+
+.li_active {
+	width : 100%;
+	height : 50px;
+	display : block;
+	border-top : 1px solid #dcdcdc;
+	border-bottom : 1px solid #dcdcdc;
+}
+
+._list {
+	width : 30%;
+	height : 870px;
+	display : inline;
+	float : left;
+	/* margin-left : 50px; */
+	margin-top : 10px;
+}
+
+.butt_list {
+	width : 80%;
+	height : 40px;
+	display : block;
+}
+
+.li_list {
+	width : 80%;
+	height : 40px;
+	display : block;
+	border : 1px solid #dcdcdc;
+	border-radius : 10px;
+	background-color : cornflowerblue;
+	text-align : center;
+	color : #fff;
+	margin-top : 20px;
 }

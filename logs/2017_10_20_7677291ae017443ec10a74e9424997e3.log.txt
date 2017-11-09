@@ -1,0 +1,4 @@
+[17:27:25][通知]访问了测试文件
+[17:27:44][SQL]执行SQL语句：SELECT count(*) AS `total` FROM `tips`
+[17:27:44][SQL]执行SQL语句：SELECT * FROM `tips` LIMIT 0 ,1
+[17:28:09][通知]访问了测试文件

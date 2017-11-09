@@ -159,7 +159,7 @@ function rand_num_code(int $len){
 	return (int)$num;
 }
 /*
-生成指定长度的随机字符串（邀请码）
+生成指定长度的随机字符串（原邀请码）
 */
 function randStr(int $len){
 	$str="";
