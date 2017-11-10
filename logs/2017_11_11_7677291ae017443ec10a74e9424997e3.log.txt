@@ -1,0 +1,59 @@
+[00:05:30][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:05:30][测试]执行水印
+[00:05:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:05:37][测试]执行水印
+[00:06:17][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:06:17][测试]执行水印1
+[00:06:29][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:06:29][测试]执行水印1
+[00:06:32][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:06:32][测试]执行水印1
+[00:09:44][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:09:44][测试]执行水印1
+[00:11:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:11:15][测试]执行水印1
+[00:11:18][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:11:18][测试]执行水印1
+[00:13:55][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:13:55][测试]执行水印1
+[00:13:55][测试]完成执行水印1
+[00:16:27][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:16:27][测试]执行水印1
+[00:16:27][测试]完成执行水印1
+[00:19:06][通知]访问了测试文件
+[00:19:06][SQL]执行SQL语句：INSERT INTO `image`(`title`, `type`, `src`, `timeline`) VALUES ('无标题', 'png' ,'source/images/1510330746.png',1510330746)
+[00:19:35][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
+[00:19:35][测试]执行水印1
+[00:19:35][测试]完成执行水印1
+[00:20:32][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
+[00:20:32][测试]执行水印1
+[00:20:32][测试]完成执行水印1
+[00:20:41][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
+[00:20:41][测试]执行水印1
+[00:20:41][测试]完成执行水印1
+[00:20:52][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
+[00:20:52][测试]执行水印1
+[00:20:52][测试]完成执行水印1
+[00:20:57][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:20:57][测试]执行水印1
+[00:20:57][测试]完成执行水印1
+[00:21:39][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:21:39][测试]执行水印1
+[00:21:39][测试]完成执行水印1
+[00:21:55][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:21:55][测试]执行水印1
+[00:21:55][测试]完成执行水印1
+[00:22:24][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:22:24][测试]执行水印5
+[00:26:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:26:15][测试]完成执行水印1
+[00:26:26][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:26:41][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:26:54][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:27:04][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:27:13][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:27:18][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:27:27][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:27:38][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:27:47][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:27:50][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1

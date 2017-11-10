@@ -21,3 +21,14 @@
 [21:32:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
 [21:32:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
 [21:32:49][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[23:45:52][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[23:45:52][图片类型错误]id: 类型： 路径：
+[23:46:36][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[23:47:21][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[23:51:56][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[23:53:55][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[23:56:13][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[23:57:39][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[23:57:40][测试]执行水印
+[23:58:21][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[23:58:21][测试]执行水印
