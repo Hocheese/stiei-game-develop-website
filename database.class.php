@@ -55,5 +55,27 @@ class Database{
 		}
 		return $relData;
 	}
+	
+	function select_single(String $table,Array $field=null,Array $where=null){
+		$fieldstr="";
+		if($field==null){
+			$fieldstr=" * ";
+		}else{
+			foreach($field as $v){
+				$fieldstr.=$fieldstr==""?" `$v` ":" , `$v` ";
+			}
+			
+		}
+		$wherestr="";
+		if($where==null){
+			
+		}else{
+			foreach($where as $k => $v){
+				$wherestr.=$wherestr==""?" $k = $v ":" AND $k = $v ";
+			}
+			$wherestr=" WHERE ".$wherestr;
+		}
+		$sql="SELECT $fieldstr FROM `$table`  $wherestr";
+	}
 }
 ?>
