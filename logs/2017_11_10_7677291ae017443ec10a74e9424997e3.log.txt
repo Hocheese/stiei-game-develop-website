@@ -11,3 +11,13 @@
 [20:01:02][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'source/images/1510315262..png,1510315262)' at line 1
 [20:03:51][通知]访问了测试文件
 [20:03:51][SQL]执行SQL语句：INSERT INTO `image`(`title`, `type`, `src`, `timeline`) VALUES ('无标题', 'png' ,'source/images/1510315431.png',1510315431)
+[21:30:48][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:31:05][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:31:48][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:32:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:32:27][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:32:32][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:32:33][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:32:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:32:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:32:49][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0

@@ -56,7 +56,9 @@ function image_type(){
 	return $type;
 }
 
-function image_get(){
-	
+function image_get(int $id){
+	$db=new Database();
+	$rel=$db->query("SELECT * FROM `image` WHERE `id`=$id");
+	return $rel;
 }
 ?>
