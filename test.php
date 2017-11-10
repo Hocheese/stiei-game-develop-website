@@ -2,9 +2,11 @@
 //Asia/Shanghai
 define("TOKEN",true);
 include("config.php");
+include("database.class.php");
 include("function.php");
 include("Tpl.class.php");
 include("InviteCode.class.php");
+include("model/image.php");
 //include("user.php")
 output_log("通知","访问了测试文件");
 //test start
@@ -17,6 +19,10 @@ function test(Array $a=null){
 	return $a==null?"NULL":"ARRAY";
 }
 echo test();
+if(isset($_FILES['file'])){
+	var_dump(image_save()) ;
+}
+
 ?>
 <!doctype html>
 <html>
@@ -54,6 +60,14 @@ echo test();
 	<input type="text" name="usercode">
 	<input type="password" name="password">
 	<button>0.0</button>
+</form>
+<!-- The data encoding type, enctype, MUST be specified as below -->
+<form enctype="multipart/form-data" action="" method="POST">
+    <!-- MAX_FILE_SIZE must precede the file input field -->
+    
+    <!-- Name of input element determines name in $_FILES array -->
+    Send this file: <input name="file" type="file" />
+    <input type="submit" value="Send File" />
 </form>
 </body>
 </html>
