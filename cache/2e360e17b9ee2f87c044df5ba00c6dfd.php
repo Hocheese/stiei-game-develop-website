@@ -16,7 +16,7 @@
 			<li><a href="?ctrl=admin">封面</a></li>
 			<li><a href="?ctrl=admin&act=basic">基本设置</a></li>
 			<li><a href="#">用户管理</a></li>
-			<li><a href="#">文章管理</a></li>
+			<li><a href="?ctrl=admin&act=article">文章管理</a></li>
 			<li><a href="?ctrl=admin&act=image">图片管理</a></li>
 			<li><a href="#">团队管理</a></li>
 			<li><a href="#">小贴士管理</a></li>

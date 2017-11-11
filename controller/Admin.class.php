@@ -1,4 +1,5 @@
 <?php
+include("model/article.php");
 include("model/image.php");
 class Admin extends Controller{
 	private $opt;
@@ -53,7 +54,7 @@ class Admin extends Controller{
 							$file[$key]["rel"]=$rel?"成功":"失败";
 							
 						}else{
-							$file[$key]["rel"]="失败";
+							$file[$key]["rel"]="忽略";
 						}
 					}
 					//
@@ -86,8 +87,38 @@ class Admin extends Controller{
 	function article(){
 		switch ($this->opt){
 			case "display":
+				$class=article_getClassList();
+				if($class["error"]!=0){
+					$class["data"][0]["id"]=0;
+					$class["data"][0]["name"]="无分类";
+				}
+				$tpl=new Tpl("admin/article");
+				$tpl->assign("class",$class["data"]);
+				$tpl->display();
+				break;
 			case "add":
+				if(!isset($_POST["text"])||$_POST["text"]==""){
+					$this->error("请输入文章内容！");
+					exit;
+				}else{
+					$text=$_POST["text"];
+					$title=isset($_POST["title"])||$_POST["title"]==""?$_POST["title"]:"无题";
+					$class=isset($_POST["class"])?$_POST["class"]:0;
+					$imgid=isset($_POST["imgid"])?$_POST["imgid"]:0;
+					$rel=article_add($title,$text,$class,$imgid);
+					if($rel["error"]!=0){
+						$this->error($rel["data"]);
+					}else{
+						$this->success("文章发表成功");
+					}
+				}
+				break;
 			case "del":
+			case "delclass":
+				$id=isset($_GET["id"])?(int)$_GET["id"]:0;
+				article_class_del($id);
+				$this->success("分类已删除");
+				break;
 		}
 	}
 	
@@ -125,6 +156,13 @@ class Admin extends Controller{
 		output_log("管理模块错误",$info);
 		$tpl=new Tpl("admin/failed");
 		$tpl->assign("error",$info);
+		$tpl->display();
+		exit;
+	}
+	private function success(String $info){
+		
+		$tpl=new Tpl("admin/success");
+		$tpl->assign("info",$info);
 		$tpl->display();
 		exit;
 	}

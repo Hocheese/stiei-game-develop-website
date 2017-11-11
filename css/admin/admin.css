@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+.a_art{
+	color: blue;
+}
 .container{
 	display: flex;
 	width: 100%;
@@ -12,6 +15,10 @@ a{
 article{
 	display: flex;
 	width: 80%;
+	flex-direction: column;
+}
+form{
+	display: flex;
 	flex-direction: column;
 }
 html,body{
