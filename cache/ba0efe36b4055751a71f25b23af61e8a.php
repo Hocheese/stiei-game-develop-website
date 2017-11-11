@@ -1,4 +1,7 @@
-{tpl:admin/header}
+<?php if(!defined("TOKEN")){
+	header("HTTP/1.1 403 Forbidden");
+	exit("Access Forbidden");
+} ?><?php include("cache/2e360e17b9ee2f87c044df5ba00c6dfd.php"); ?>
 
 <div>
 	<h1>添加图片</h1>
@@ -22,4 +25,4 @@
 <div>
 	<h1>图片列表</h1>
 </div>
-{tpl:admin/footer}
+<?php include("cache/1866e64f8c3a4cc675d5ad41c133aca5.php"); ?>

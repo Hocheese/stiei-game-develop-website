@@ -1,4 +1,5 @@
 <?php
+include("model/image.php");
 class Admin extends Controller{
 	private $opt;
 	function __construct(){
@@ -12,8 +13,11 @@ class Admin extends Controller{
 			exit;
 		}else{
 			$this->opt=isset($_GET['opt'])?$_GET['opt']:"display";
-			$tpl=new Tpl("admin/frame");
-			$tpl->display();
+			if(!isset($_GET['act'])){
+				$tpl=new Tpl("admin/frame");
+				$tpl->display();
+			}
+			
 		}
 	}
 	
@@ -51,7 +55,21 @@ class Admin extends Controller{
 	function image(){
 		switch ($this->opt){
 			case "display":
+				$tpl=new Tpl("admin/image");
+				$tpl->display();
+				break;
 			case "add":
+				$save=isset($_GET["safe"])?$_GET["safe"]:5;
+				$rel=image_save($save);
+				if($rel["error"]==0){
+					$tpl=new Tpl("admin/image_upload_success");
+					$tpl->display();
+				}else{
+					$tpl=new Tpl("admin/image_upload_failed");
+					$tpl->assign("error",$rel['data']);
+					$tpl->display();
+				}
+				break;
 			case "del":
 			case "classadd":
 			case "classdel":

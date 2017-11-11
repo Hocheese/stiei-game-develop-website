@@ -13,11 +13,11 @@
 <div class="container">
 	<nav>
 		<ul>
-			<li><a href="#">社团网站_后台管理</a></li>
+			<li><a href="?ctrl=admin">封面</a></li>
 			<li><a href="#">基本设置</a></li>
 			<li><a href="#">用户管理</a></li>
 			<li><a href="#">文章管理</a></li>
-			<li><a href="#">图片管理</a></li>
+			<li><a href="?ctrl=admin&act=image">图片管理</a></li>
 			<li><a href="#">团队管理</a></li>
 			<li><a href="#">小贴士管理</a></li>
 		</ul>

@@ -79,3 +79,8 @@
 [10:50:43][模板错误]err1:不存在的模板：admin/frame
 [10:50:43][模板错误]err1:不存在的模板：tpl/admin/framehtml
 [10:50:43][模板错误]err1:不存在的模板：tpl/admin/frame
+[13:04:40][SQL]执行SQL语句：INSERT INTO `image`(`title`, `type`, `src`, `safe`, `timeline`) VALUES ('无标题', 'png' ,'source/images/1510376680.png',5,1510376680)
+[13:04:50][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=3
+[13:05:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
+[13:05:20][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[13:05:22][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=3
