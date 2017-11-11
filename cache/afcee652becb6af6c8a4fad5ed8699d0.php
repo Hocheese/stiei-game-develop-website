@@ -17,5 +17,5 @@
 
 </style>
 <h1><img src="img/logo.png" width="128" height="128" alt="logo"> <span> 上电游戏开发社</span></h1>
-<p><?php echo $info; ?></p>
+<p>图片上传成功</p>
 <?php include("cache/1866e64f8c3a4cc675d5ad41c133aca5.php"); ?>

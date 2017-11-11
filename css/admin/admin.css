@@ -16,6 +16,7 @@ article{
 	display: flex;
 	width: 80%;
 	flex-direction: column;
+	overflow: scroll;
 }
 form{
 	display: flex;
@@ -40,6 +41,10 @@ li{
 	display: flex;
 	border-bottom: #FFFFFF solid 1px;
 	padding: 5px;
+}
+table,tbody{
+	display: flex;
+	flex-direction: column;
 }
 ul{
 	padding: 0;

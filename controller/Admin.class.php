@@ -119,6 +119,19 @@ class Admin extends Controller{
 				article_class_del($id);
 				$this->success("分类已删除");
 				break;
+			case "addclass":
+				if(!isset($_POST["name"])||$_POST["name"]==""){
+					$rel["error"]=3;
+					$rel["data"]="请输入分类名称";
+				}else{
+					$rel=article_class_add($_POST["name"]);
+				}
+				if($rel["error"]==0){
+					$this->success("分类添加成功");
+				}else{
+					$this->error($rel["data"]);
+				}
+				break;
 		}
 	}
 	

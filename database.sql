@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-11-10 12:42:22
+-- Generation Time: 2017-11-11 12:51:57
 -- 服务器版本： 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -38,6 +38,17 @@ CREATE TABLE `article` (
   `text` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- 转存表中的数据 `article`
+--
+
+INSERT INTO `article` (`id`, `title`, `timeline`, `ucode`, `cid`, `imageid`, `text`) VALUES
+(1, '', 1510399644, 100001, 0, 0, ''),
+(2, '', 1510399718, 100001, 0, 0, ''),
+(3, '', 1510399780, 100001, 0, 0, ''),
+(4, '', 1510399786, 100001, 0, 0, ''),
+(5, '测试', 1510401045, 100001, 0, 3, '这是游戏开发社网站的第一篇有意义的文章~~~');
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +59,14 @@ CREATE TABLE `article_class` (
   `id` int(11) NOT NULL,
   `name` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- 转存表中的数据 `article_class`
+--
+
+INSERT INTO `article_class` (`id`, `name`) VALUES
+(0, '2221211221'),
+(0, '测试');
 
 -- --------------------------------------------------------
 
@@ -60,8 +79,19 @@ CREATE TABLE `image` (
   `title` text COLLATE utf8_unicode_ci NOT NULL,
   `type` text COLLATE utf8_unicode_ci NOT NULL,
   `src` text COLLATE utf8_unicode_ci NOT NULL,
+  `safe` int(11) NOT NULL COMMENT '水印位置',
   `timeline` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- 转存表中的数据 `image`
+--
+
+INSERT INTO `image` (`id`, `title`, `type`, `src`, `safe`, `timeline`) VALUES
+(1, '无标题', 'png', 'source/images/1510315431.png', 5, 1510315431),
+(2, '无标题', 'png', 'source/images/1510330746.png', 6, 1510330746),
+(3, '无标题', 'png', 'source/images/1510376680.png', 5, 1510376680),
+(4, '无标题', 'jpg', 'source/images/1510388451.jpg', 5, 1510388451);
 
 -- --------------------------------------------------------
 
@@ -139,6 +169,13 @@ CREATE TABLE `user` (
   `timeline` int(11) NOT NULL COMMENT '注册时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- 转存表中的数据 `user`
+--
+
+INSERT INTO `user` (`id`, `account_code`, `password`, `email`, `admin`, `level`, `realname`, `sex`, `study_code`, `profession`, `timeline`) VALUES
+(1, 100001, '$2y$10$I/zsCuzPqpo6J6Mpyhjvwegl9HCzr3TUrmpvgN7wampZyucYRVGFO', '', 1, 0, '', 0, 0, 0, 1510366845);
+
 -- --------------------------------------------------------
 
 --
@@ -213,12 +250,12 @@ ALTER TABLE `user`
 -- 使用表AUTO_INCREMENT `article`
 --
 ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- 使用表AUTO_INCREMENT `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- 使用表AUTO_INCREMENT `sys_profession`
 --
@@ -238,7 +275,7 @@ ALTER TABLE `tips`
 -- 使用表AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '系统标识符';COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '系统标识符', AUTO_INCREMENT=2;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

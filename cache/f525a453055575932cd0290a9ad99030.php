@@ -32,14 +32,16 @@ function change(){
 <div>
 	<h1>添加分类</h1>
 	<table>
-		<tr>
+		
 			<?php foreach($class as $v){ ?>
-			<td><?php echo $v['name']; ?></td><td><a href="?ctrl=admin&act=article&opt=delclass&id=<?php echo $v['id']; ?>">删除</a></td>
+			<tr>
+			<td><?php echo $v['name']; ?></td><td><a class="a_art" href="?ctrl=admin&act=article&opt=delclass&id=<?php echo $v['id']; ?>">删除</a></td>
+			</tr>
 			<?php } ?>
 			
 			
-		</tr>
-		<form action="" method="post">
+		
+		<form action="?ctrl=admin&act=article&opt=addclass" method="post">
 			<tr>
 				<td><input type="text" name="name"></td>
 				<td><button>添加</button></td>
