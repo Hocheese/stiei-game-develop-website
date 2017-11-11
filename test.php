@@ -1,5 +1,6 @@
 <?php
 //Asia/Shanghai
+session_start();
 define("TOKEN",true);
 include("config.php");
 include("database.class.php");
@@ -22,7 +23,9 @@ echo test();
 if(isset($_FILES['file'])){
 	var_dump(image_save()) ;
 }
-
+$time=time();
+echo "<strong>time:$time</strong>,<strong>".password_hash(md5(md5("123456").$time),PASSWORD_DEFAULT)."</strong>";
+unset($_SESSION['verCode']);
 ?>
 <!doctype html>
 <html>

@@ -1,5 +1,5 @@
 <?php
-function image_save(){
+function image_save(int $safe=0){
 	define("IMAGE_UPLOAD_DIR","source/images");
 	is_dir("source")?"":mkdir("source");
 	is_dir(IMAGE_UPLOAD_DIR)?"":mkdir(IMAGE_UPLOAD_DIR);
@@ -10,7 +10,7 @@ function image_save(){
 		move_uploaded_file($_FILES["file"]["tmp_name"],$dirname);
 		$db=new Database();
 		$title=isset($_GET['title'])?$_GET['title']:"无标题";
-		$rel=$db->query("INSERT INTO `image`(`title`, `type`, `src`, `timeline`) VALUES ('$title', '$type' ,'$dirname',$time)");
+		$rel=$db->query("INSERT INTO `image`(`title`, `type`, `src`, `safe`, `timeline`) VALUES ('$title', '$type' ,'$dirname',$safe,$time)");
 		
 	}else{
 		

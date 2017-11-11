@@ -13,9 +13,11 @@ class Tpl{
 	public $var=array();
 	public $value=array();
 	function __construct($tpln){
-		$tpl=file_exists("tpl/".$tpln."html")?"tpl/".$tpln."html":(file_exists("tpl/".$tpln)?"tpl/".$tpln:$tpln);
+		$tpl=(file_exists("tpl/".$tpln.".html")?"tpl/".$tpln.".html":(file_exists("tpl/".$tpln)?"tpl/".$tpln:false));
 		if(!$tpl){
-			output_log("模板错误","err1:不存在的模板：".$tpl);
+			output_log("模板错误","err1:不存在的模板：".$tpln);
+			output_log("模板错误","err1:不存在的模板："."tpl/".$tpln.".html");
+			output_log("模板错误","err1:不存在的模板："."tpl/".$tpln);
 			$this->error=1;
 		}
 		$this->tplPath=$tpl;
@@ -29,14 +31,14 @@ class Tpl{
 				}
 				$handle=fopen($this->tplPath,"rb");
 				$this->tplData=fread($handle,filesize($this->tplPath));
-				while(($tplInclude=preg_match('/{tpl:([a-zA-Z.]+)}/',$this->tplData,$matches))!=0){
+				while(($tplInclude=preg_match('/{tpl:([a-zA-Z.\/]+)}/',$this->tplData,$matches))!=0){
 			
 					$tplobj=new Tpl($matches[1]);
 
 					if($tplobj->error!=0){
-						$this->tplData=preg_replace('/{tpl:([a-zA-Z.]+)}/',"<!--模板错误：-->\n<!--文件名：".'${1}'."-->\n<!--错误信息：".$tplobj->error.'-->',$this->tplData,1);
+						$this->tplData=preg_replace('/{tpl:([a-zA-Z.\/]+)}/',"<!--模板错误：-->\n<!--文件名：".'${1}'."-->\n<!--错误信息：".$tplobj->error.'-->',$this->tplData,1);
 					}else{
-						$this->tplData=preg_replace('/{tpl:([a-zA-Z.]+)}/','<?php include("cache/'.md5($tplobj->tplPath).'.php"); ?>',$this->tplData,1);
+						$this->tplData=preg_replace('/{tpl:([a-zA-Z.\/]+)}/','<?php include("cache/'.md5($tplobj->tplPath).'.php"); ?>',$this->tplData,1);
 					}
 				}
 				$this->tplData="<?php if(!defined(\"TOKEN\")){\r\n	header(\"HTTP/1.1 403 Forbidden\");\r\n	exit(\"Access Forbidden\");\r\n} ?>".$this->tplData;

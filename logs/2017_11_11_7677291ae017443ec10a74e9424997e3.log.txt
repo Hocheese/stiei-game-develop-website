@@ -57,3 +57,25 @@
 [00:27:38][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
 [00:27:47][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
 [00:27:50][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:35:43][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:39:07][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[00:39:10][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[00:39:14][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[09:26:17][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
+[09:26:24][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[09:26:32][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[09:27:06][通知]访问了测试文件
+[09:54:34][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[10:20:26][通知]访问了测试文件
+[10:20:45][通知]访问了测试文件
+[10:31:10][通知]访问了测试文件
+[10:31:12][通知]访问了测试文件
+[10:32:39][通知]访问了测试文件
+[10:33:37][通知]访问了测试文件
+[10:33:39][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100001
+[10:47:08][模板错误]err1:不存在的模板：
+[10:47:18][模板错误]err1:不存在的模板：
+[10:48:08][模板错误]err1:不存在的模板：admin/frame
+[10:50:43][模板错误]err1:不存在的模板：admin/frame
+[10:50:43][模板错误]err1:不存在的模板：tpl/admin/framehtml
+[10:50:43][模板错误]err1:不存在的模板：tpl/admin/frame

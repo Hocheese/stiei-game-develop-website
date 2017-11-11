@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+.container{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+article{
+	display: flex;
+	width: 80%;
+	flex-direction: column;
+}
+html,body{
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	background-color: wheat;
+}
+nav{
+	display: flex;
+	flex-direction: column;
+	background-color: blueviolet;
+	color: white;
+	height: 100%;
+	width: 20%;
+}
+li{
+	display: flex;
+	border-bottom: #FFFFFF solid 1px;
+	padding: 5px;
+}
+ul{
+	padding: 0;
+	margin: 0;
+}

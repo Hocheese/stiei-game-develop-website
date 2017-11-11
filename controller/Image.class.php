@@ -100,13 +100,14 @@ class Image extends Controller{
 		}else{
 			header("Content-type:image/png");
 			//彩蛋
-			$errorInfo=array("江山如此多娇，引无数英雄竞折腰",
+			$errorInfo=array("江山如此多娇  引无数英雄竞折腰",
 							 "帝国主义是纸老虎",
-							 "天若有情天亦老，人间正道是沧桑",
+							 "天若有情天亦老  人间正道是沧桑",
 							 "一切反动派都是纸老虎",
-							 "宜将剩勇追穷寇，不可沽名学霸王",
-							 "踏遍青山人未老，风景这边独好",
-							 "星星之火，可以燎原"
+							 "宜将剩勇追穷寇  不可沽名学霸王",
+							 "踏遍青山人未老  风景这边独好",
+							 "星星之火  可以燎原",
+							 "好好学习  天天向上"
 							);
 			$eid=rand(0,count($errorInfo)-1);
 			$errorImage=imagecreate(680,60);

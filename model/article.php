@@ -9,6 +9,6 @@ function article_add(String $title,String $text,int $class,int $imgid=0){
 	$ucode=$_SESSION["userData"]["account_code"];
 	$db=new Database();
 	$rel=$db->query("INSERT INTO `article`( `title`, `timeline`, `ucode`, `cid`, `imageid`, `text`) VALUES ($title,$timeline,$ucode,$class,$imgid,$text)");
-	
+	return $rel;
 }
 ?>

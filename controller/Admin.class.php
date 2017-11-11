@@ -12,6 +12,8 @@ class Admin extends Controller{
 			exit;
 		}else{
 			$this->opt=isset($_GET['opt'])?$_GET['opt']:"display";
+			$tpl=new Tpl("admin/frame");
+			$tpl->display();
 		}
 	}
 	
@@ -44,6 +46,15 @@ class Admin extends Controller{
 			case "display":
 			case "add":
 			case "del":
+		}
+	}
+	function image(){
+		switch ($this->opt){
+			case "display":
+			case "add":
+			case "del":
+			case "classadd":
+			case "classdel":
 		}
 	}
 }
