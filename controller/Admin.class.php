@@ -122,6 +122,16 @@ class Admin extends Controller{
 					}
 				}
 				break;
+			case "kindeditor":
+				$class=article_getClassList();
+				if($class["error"]!=0){
+					$class["data"][0]["id"]=0;
+					$class["data"][0]["name"]="无分类";
+				}
+				$tpl=new Tpl("admin/kindeditor");
+				$tpl->assign("class",$class["data"]);
+				$tpl->display();
+				break;
 			case "list":
 				$start=isset($_GET["start"])?$_GET["start"]:0;
 				$list=isset($_GET["list"])?$_GET["list"]:10;
@@ -174,6 +184,24 @@ class Admin extends Controller{
 					$tpl->assign("error",$rel['data']);
 					$tpl->display();
 				}
+				break;
+			
+			//为KindEditor提供的图片上传
+			case "highadd":
+				if(!isset($_FILES['imgFile'])){
+					$this->error("高级上传模块_非法访问");
+				}
+				$_FILES['file']=$_FILES['imgFile'];
+				$rel=image_save(5);
+				if($rel["error"]==0){
+					$rel=image_getByTime($rel["data"]);
+					$r["error"]=0;
+					$r["url"]="?ctrl=image&act=get&id=".$rel["data"][0]["id"];
+				}else{
+					$r["error"]=1;
+					$r["message"]=$rel["data"];
+				}
+				echo json_encode($r);
 				break;
 			case "del":
 			case "classadd":

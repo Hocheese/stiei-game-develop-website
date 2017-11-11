@@ -11,6 +11,9 @@ function image_save(int $safe=0){
 		$db=new Database();
 		$title=isset($_GET['title'])?$_GET['title']:"无标题";
 		$rel=$db->query("INSERT INTO `image`(`title`, `type`, `src`, `safe`, `timeline`) VALUES ('$title', '$type' ,'$dirname',$safe,$time)");
+		if($rel["error"]==0){
+			$rel["data"]=$time;
+		}
 		
 	}else{
 		
@@ -61,10 +64,16 @@ function image_get(int $id){
 	$rel=$db->query("SELECT * FROM `image` WHERE `id`=$id");
 	return $rel;
 }
+function image_getByTime(int $time){
+	$db=new Database();
+	$rel=$db->query("SELECT * FROM `image` WHERE `timeline`=$time");
+	return $rel;
+}
 function image_count(){
 	$db=new Database();
 	$rel=$db->query("SELECT MAX(`id`) AS `total` FROM `image`");
 	$rel['data']=$rel['data'][0];
 	return $rel;
 }
+
 ?>

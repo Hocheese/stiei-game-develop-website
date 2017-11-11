@@ -8,16 +8,17 @@
 		font-family: mao;
 	}
 	h1,article{
-		font-family: mao;
+		
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 72px;
 	}
-	p{
-		color: wheat;
+	.m,h1{
+		font-family: mao;
+		font-size: 72px;
 	}
 </style>
 <h1><img src="img/logo.png" width="128" height="128" alt="logo"> <span> 上电游戏开发社</span></h1>
-<p>假装是毛主席题词</p>
+<p class="m">革命尚未成功，同志仍需努力</p>
+<p><?php echo $error; ?></p>
 <?php include("cache/1866e64f8c3a4cc675d5ad41c133aca5.php"); ?>

@@ -15,7 +15,7 @@ function change(){
 </style>
 <div>
 	<h1>发表文章</h1>
-	<a class="a_art" href="#">高级模式</a>
+	<a class="a_art" href="?ctrl=admin&act=article&opt=kindeditor">高级模式</a>
 	<form action="?ctrl=admin&act=article&opt=add" method="post">
 		<input type="title" name="title" placeholder="标题">
 		<select name="class">
