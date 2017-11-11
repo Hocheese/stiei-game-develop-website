@@ -61,4 +61,10 @@ function image_get(int $id){
 	$rel=$db->query("SELECT * FROM `image` WHERE `id`=$id");
 	return $rel;
 }
+function image_count(){
+	$db=new Database();
+	$rel=$db->query("SELECT MAX(`id`) AS `total` FROM `image`");
+	$rel['data']=$rel['data'][0];
+	return $rel;
+}
 ?>

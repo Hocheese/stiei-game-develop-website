@@ -20,6 +20,52 @@ class Admin extends Controller{
 			
 		}
 	}
+	function basic(){
+		switch ($this->opt){
+			case "display":
+				$tpl=new Tpl("admin/basic");
+				$tpl->display();
+				break;
+			case "clear":
+				$filelist=null;
+				try{
+					$filelist=scandir("cache");
+				}catch(Exception $e){
+					$error="读取文件列表失败。".$e->getMessage();
+					$this->error($error);
+				}
+				
+				if(!$filelist){
+					$error="缓存目录不存在或被占用";
+					$this->error($error);
+				}else{
+					$file;
+					foreach($filelist as $key =>$value){
+						$file[$key]["path"]="cache/".$value;
+						if(is_file("cache/".$value)){
+							$rel=false;
+							try{
+								$rel=unlink("cache/".$value);
+								
+							}catch(Exception $e){
+								output_log("管理模块错误","文件删除失败".$e->getMessage());
+							}
+							$file[$key]["rel"]=$rel?"成功":"失败";
+							
+						}else{
+							$file[$key]["rel"]="失败";
+						}
+					}
+					//
+					$tpl=new Tpl("admin/basic_clear");
+					$tpl->assign("info",$file);
+					$tpl->display();
+					
+				}
+				break;
+			case "del":
+		}
+	}
 	
 	function tips(){
 		switch ($this->opt){
@@ -75,5 +121,13 @@ class Admin extends Controller{
 			case "classdel":
 		}
 	}
+	private function error(String $info){
+		output_log("管理模块错误",$info);
+		$tpl=new Tpl("admin/failed");
+		$tpl->assign("error",$info);
+		$tpl->display();
+		exit;
+	}
+	
 }
 ?>

@@ -43,7 +43,10 @@ class Tpl{
 				}
 				$this->tplData="<?php if(!defined(\"TOKEN\")){\r\n	header(\"HTTP/1.1 403 Forbidden\");\r\n	exit(\"Access Forbidden\");\r\n} ?>".$this->tplData;
 				$this->tplData=preg_replace('/{\$([a-zA-Z0-9_\[\$\]\'"]+)}/','<?php echo \$${1}; ?>',$this->tplData);
-				$this->tplData=preg_replace('/{\?(\s(\S)+\s)+\?}/','<?php ${1} ?>',$this->tplData);
+				/*$this->tplData=preg_replace('/{\?(\s(\S)+\s)+\?}/','<?php ${1} ?>',$this->tplData);*/
+				/*$this->tplData=preg_replace('/(?=({\?))$(.*)(?=(\?}))/','<?php ${2} ?>',$this->tplData);*/
+				$this->tplData=preg_replace('/{\?/','<?php',$this->tplData);
+				$this->tplData=preg_replace('/\?}/','?>',$this->tplData);
 				$handle=fopen("cache/".md5($this->tplPath).".php","ab");
 				fwrite($handle,$this->tplData);
 			}

@@ -84,3 +84,6 @@
 [13:05:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
 [13:05:20][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
 [13:05:22][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=3
+[14:21:22][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
+[14:21:28][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[16:04:18][模块错误]basic不存在，路径：controller/basic.class.php
