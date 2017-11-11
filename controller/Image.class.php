@@ -17,37 +17,46 @@ class Image extends Controller{
 				imagedestroy($errorImage);
 			}else{
 				$rel["data"]=$rel["data"][0];
-				switch($rel["data"]["type"]){
-					case "jpg":
+				
+				if($rel["data"]['hidden']==0){
+					$info=getimagesize($rel["data"]["src"]);
+					switch($rel["data"]["type"]){
+						case "jpg":
 						
-					case "jpeg":
-						header("Content-type:image/jpeg");
-						$image=imagecreatefromjpeg($rel["data"]["src"]);
-						break;
-					case "png":
-						header("Content-type:image/png");
-						$image=imagecreatefrompng($rel["data"]["src"]);
-						break;
-					case "gif":
-						header("Content-type:image/gif");
-						$image=imagecreatefromgif($rel["data"]["src"]);
-					default:
-						header("Content-type:image/png");
-						$errorImage=imagecreate(220,60);
-						imagecolorallocate($errorImage,255,255,255);
-						$color=imagecolorallocate($errorImage,rand(0,255),rand(0,255),rand(0,255));
-						imagefttext($errorImage,32.0,0,0,45,$color,"fonts/mzd.ttf","系统出错");
-						output_log("图片错误","不支持的图片类型 id:".$rel["data"]["id"]." 类型：".$rel["data"]["type"]." 路径：".$rel["data"]["src"]);
-						imagepng($errorImage);
-						imagedestroy($errorImage);
-						exit;
+						case "jpeg":
+							header("Content-type:image/jpeg");
+							$image=imagecreatefromjpeg($rel["data"]["src"]);
+							break;
+						case "png":
+							header("Content-type:image/png");
+							$image=imagecreatefrompng($rel["data"]["src"]);
+							break;
+						case "gif":
+							header("Content-type:image/gif");
+							$image=imagecreatefromgif($rel["data"]["src"]);
+						default:
+							header("Content-type:image/png");
+							$errorImage=imagecreate(220,60);
+							imagecolorallocate($errorImage,255,255,255);
+							$color=imagecolorallocate($errorImage,rand(0,255),rand(0,255),rand(0,255));
+							imagefttext($errorImage,32.0,0,0,45,$color,"fonts/mzd.ttf","系统出错");
+							output_log("图片错误","不支持的图片类型 id:".$rel["data"]["id"]." 类型：".$rel["data"]["type"]." 路径：".$rel["data"]["src"]);
+							imagepng($errorImage);
+							imagedestroy($errorImage);
+							exit;
+					}
+				}else{
+					header("Content-type:image/png");
+					$image=imagecreatefrompng("img/psb.png");
+					$info=getimagesize("img/psb.png");
 				}
+				
 				if($rel["data"]["safe"]>0){
 					$logo64="img/logo64.png";
 					if(file_exists($logo64)){
 						$fill=imagecreatefrompng($logo64);
 						imagesettile($image,$fill);
-						$info=getimagesize($rel["data"]["src"]);
+						
 						$width=$info[0];
 						$height=$info[1];
 						//output_log("测试","执行水印".$rel["data"]["safe"]);

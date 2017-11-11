@@ -1,6 +1,7 @@
 <?php
 include("model/article.php");
 include("model/image.php");
+include("InviteCode.class.php");
 class Admin extends Controller{
 	private $opt;
 	function __construct(){
@@ -79,6 +80,14 @@ class Admin extends Controller{
 	function user(){
 		switch ($this->opt){
 			case "display":
+				$tpl=new Tpl("admin/user");
+				$tpl->display();
+				break;
+			case "code":
+				$code=isset($_GET["code"])?$_GET["code"]:0;
+				$code=new InviteCode($code);
+				echo $code->inviteCode_create();
+				break;
 			case "add":
 			case "del":
 		}
@@ -112,6 +121,12 @@ class Admin extends Controller{
 						$this->success("文章发表成功");
 					}
 				}
+				break;
+			case "list":
+				$start=isset($_GET["start"])?$_GET["start"]:0;
+				$list=isset($_GET["list"])?$_GET["list"]:10;
+				$rel=article_list($start,$list);
+				echo json_encode($rel);
 				break;
 			case "del":
 			case "delclass":

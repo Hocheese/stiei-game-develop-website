@@ -285,3 +285,57 @@
 [20:23:26][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
 [20:24:38][SQL]执行SQL语句：SELECT * FROM `article_class`
 [20:24:39][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[20:28:09][管理模块错误]请输入文章内容！
+[20:49:28][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
+[20:49:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[21:33:31][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:33:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:33:35][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:33:35][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:33:47][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:33:47][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:33:49][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:33:49][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:40:19][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:40:19][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:44:48][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:44:48][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:44:52][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:44:52][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:45:58][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:45:59][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:56:07][SQL]执行SQL语句：SELECT * FROM `article` LIMIT 0,10
+[21:56:14][SQL]执行SQL语句：SELECT * FROM `article` LIMIT 0,10
+[22:34:49][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:34:49][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:48:08][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:48:18][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:12][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:13][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:14][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:14][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:14][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:32][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:49:55][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:51:39][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[22:53:38][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:53:38][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:53:59][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:53:59][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:54:00][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:54:00][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[23:24:31][SQL]执行SQL语句：SELECT * FROM `article_class`
+[23:24:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[23:25:33][SQL]执行SQL语句：SELECT * FROM `article_class`
+[23:25:33][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[23:27:41][SQL]执行SQL语句：SELECT * FROM `article_class`
+[23:27:41][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[23:27:45][SQL]执行SQL语句：SELECT * FROM `article_class`
+[23:27:45][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0

@@ -20,4 +20,9 @@ function article_class_del(int $id){
 	$db=new Database();
 	$rel=$db->query("DELETE FROM `article_class` WHERE `id`=$id");
 }
+function article_list(int $start,int $list){
+	$db=new Database();
+	$rel=$db->query("SELECT * FROM `article` LIMIT $start,$list");
+	return $rel;
+}
 ?>

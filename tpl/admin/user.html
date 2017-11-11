@@ -1,0 +1,18 @@
+{tpl:admin/header}
+<div>
+<script>
+	$(document).ready(function(){
+		$("#code").click(function(){
+			$.get("?ctrl=admin&act=user&opt=code&code="+$("input[name=code]").val(),function(data){
+				$("#usercode").text(data);
+			})
+		})
+	})
+</script>
+	<h1>生成邀请码</h1>
+	<form onSubmit="return false">
+		学号：<input type="number" name="code"><button id="code">生成</button>
+		<p id="usercode"></p>
+	</form>
+</div>
+{tpl:admin/footer}
