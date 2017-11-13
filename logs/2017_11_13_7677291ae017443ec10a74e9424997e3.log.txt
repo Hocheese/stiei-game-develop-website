@@ -1,0 +1,77 @@
+[10:41:14][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=8
+[10:41:18][SQL]执行SQL语句：SELECT * FROM `article` LIMIT 0,10
+[12:32:33][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`study_code`
+[12:33:25][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`study_code`
+[12:34:36][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`study_code`
+[12:35:00][SQL]执行SQL语句：INSERT INTO `teams_info`(`tname`,`tcreator`)VALUES('统治阶层',100001)
+[12:35:02][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`study_code`
+[12:36:54][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:36:58][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:36:58][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:36:59][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:39:30][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:42:05][SQL]执行SQL语句：SELECT * FROM `article_class`
+[12:42:05][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[12:42:07][SQL]执行SQL语句：SELECT * FROM `article_class`
+[12:42:07][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[12:42:09][SQL]执行SQL语句：SELECT * FROM `article_class`
+[12:42:09][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[12:55:36][SQL]执行SQL语句：SELECT * FROM `article_class`
+[12:55:36][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[12:56:02][SQL]执行SQL语句：SELECT * FROM `article_class`
+[12:56:02][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[12:56:05][SQL]执行SQL语句：SELECT * FROM `article_class`
+[12:56:05][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[12:56:16][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:56:21][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:56:23][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:57:43][SQL]执行SQL语句：INSERT INTO `teams_info`(`tname`,`tcreator`,`timeline`)VALUES('统治阶层的管理',100001,)
+[12:57:43][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[12:57:55][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:57:57][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:57:58][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[12:59:06][SQL]执行SQL语句：INSERT INTO `teams_info`(`tname`,`tcreator`,`timeline`)VALUES('统治阶层的管理',100001,1510549146)
+[12:59:08][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[13:03:25][SQL]执行SQL语句：SELECT * FROM `article_class`
+[13:03:25][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[13:03:37][SQL]执行SQL语句：SELECT * FROM `article_class`
+[13:03:38][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[13:05:47][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[13:06:38][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=2
+[13:06:44][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=3
+[13:06:59][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=4
+[13:07:03][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[13:07:08][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=6
+[13:07:11][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=7
+[13:07:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=8
+[13:07:18][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[13:07:20][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[13:07:20][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[13:07:21][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[13:07:21][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=13
+[13:07:21][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=14
+[13:07:22][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=15
+[13:07:22][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=16
+[13:07:22][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=17
+[13:07:22][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=18
+[13:07:27][SQL]执行SQL语句：INSERT INTO `article`( `title`, `timeline`, `ucode`, `cid`, `imageid`, `text`) VALUES ('JavaScript是世界上最好的语言',1510549647,100001,0,18,'Java C# C++ PHP VB RUBY GO 都是垃圾')
+[13:07:37][SQL]执行SQL语句：SELECT * FROM `article_class`
+[13:07:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[14:34:45][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=1
+[14:35:12][SQL]执行SQL语句：SELECT * FROM `article_class`
+[14:35:12][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[14:35:15][SQL]执行SQL语句：SELECT * FROM `article_class`
+[14:35:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[14:35:28][SQL]执行SQL语句：INSERT INTO `article_class`(`name`)VALUES('活动')
+[14:35:31][SQL]执行SQL语句：SELECT * FROM `article_class`
+[14:35:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[14:35:35][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[14:35:38][SQL]执行SQL语句：SELECT * FROM `article_class`
+[14:35:38][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[14:35:48][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[14:35:58][SQL]执行SQL语句：SELECT * FROM `article_class`
+[14:35:58][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[14:40:57][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[14:41:37][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[14:41:39][SQL]执行SQL语句：SELECT * FROM `article_class`
+[14:41:39][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0

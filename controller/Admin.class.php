@@ -1,6 +1,7 @@
 <?php
 include("model/article.php");
 include("model/image.php");
+include("model/team.php");
 include("InviteCode.class.php");
 class Admin extends Controller{
 	private $opt;
@@ -133,6 +134,7 @@ class Admin extends Controller{
 				$tpl->display();
 				break;
 			case "list":
+				header("Content-type: application/json");
 				$start=isset($_GET["start"])?$_GET["start"]:0;
 				$list=isset($_GET["list"])?$_GET["list"]:10;
 				$rel=article_list($start,$list);
@@ -163,7 +165,21 @@ class Admin extends Controller{
 	function team(){
 		switch ($this->opt){
 			case "display":
+				$reldata=team_list();
+				$rel=$reldata["error"]==0?$reldata["data"]:array();
+				$tpl=new Tpl("admin/team");
+				$tpl->assign("teams",$rel);
+				$tpl->display();
+				break;
 			case "add":
+				if(empty($_POST["name"])||empty($_POST["ucode"])){
+					$this->error("请输入内容！");
+				}
+				$name=$_POST["name"];
+				$uc=$_POST["ucode"];
+				$rel=team_create($name,$uc);
+				$this->success("队伍创建成功");
+				break;
 			case "del":
 		}
 	}

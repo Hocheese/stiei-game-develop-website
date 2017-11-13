@@ -52,6 +52,7 @@ function change(){
 </div>
 <div>
 	<h1>文章列表</h1>
+	<script></script>
 </div>
 
 <?php include("cache/1866e64f8c3a4cc675d5ad41c133aca5.php"); ?>

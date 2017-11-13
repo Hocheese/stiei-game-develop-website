@@ -64,3 +64,73 @@
 [00:38:35][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
 [00:38:39][SQL]执行SQL语句：SELECT * FROM `article_class`
 [00:38:39][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[00:45:43][SQL]执行SQL语句：SELECT * FROM `article_class`
+[00:45:43][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[00:46:04][SQL]执行SQL语句：SELECT * FROM `article_class`
+[00:46:04][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[00:46:05][SQL]执行SQL语句：SELECT * FROM `article_class`
+[00:46:05][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[00:56:50][SQL]执行SQL语句：INSERT INTO `article`( `title`, `timeline`, `ucode`, `cid`, `imageid`, `text`) VALUES ('',1510419409,100001,0,0,'<img src="http://127.0.0.4/editor/plugins/emoticons/images/28.gif" border="0" alt="" /><img src="http://127.0.0.4/editor/plugins/emoticons/images/13.gif" border="0" alt="" /><img src="http://127.0.0.4/editor/plugins/emoticons/images/22.gif" border="0" alt="" />')
+[00:57:32][SQL]执行SQL语句：SELECT * FROM `article_class`
+[00:57:39][SQL]执行SQL语句：SELECT * FROM `article_class`
+[00:57:52][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:30:28][SQL]执行SQL语句：SELECT * FROM `article` LIMIT 0,10
+[16:30:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=5
+[16:31:16][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:31:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:31:20][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:31:20][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:31:23][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:31:23][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:31:25][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:31:25][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:32:07][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:32:08][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:32:09][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:32:09][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:32:10][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:32:10][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:32:13][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:32:13][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:32:16][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:32:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:32:16][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:32:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:32:17][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:32:17][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:32:23][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:32:23][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:33:16][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:33:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[16:33:18][SQL]执行SQL语句：SELECT * FROM `article_class`
+[16:33:18][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[18:38:06][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=6
+[18:38:16][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=7
+[18:38:18][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=8
+[18:38:22][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[18:38:24][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=8
+[19:00:35][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:00:35][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[19:00:37][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:00:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[19:00:40][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:00:40][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[19:00:47][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:00:47][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[19:06:11][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:06:11][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[19:06:14][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:06:15][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:06:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[19:07:51][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:07:51][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[19:07:55][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:07:55][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[19:15:26][SQL]执行SQL语句：SELECT * FROM `article` LIMIT 0,10
+[19:18:20][SQL]执行SQL语句：SELECT * FROM `article` LIMIT 0,10
+[22:35:27][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:35:27][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:35:31][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:35:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:35:32][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:35:32][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
