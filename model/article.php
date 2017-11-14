@@ -22,7 +22,7 @@ function article_class_del(int $id){
 }
 function article_list(int $start,int $list){
 	$db=new Database();
-	$rel=$db->query("SELECT * FROM `article` LIMIT $start,$list");
+	$rel=$db->query("SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT $start,$list");
 	return $rel;
 }
 function article_get(int $id){

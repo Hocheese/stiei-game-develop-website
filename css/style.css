@@ -291,8 +291,8 @@ nav {
 }
 
 #tit_active {
-	width : 20%;
-	height : 80px;
+	/*width : 20%;
+	height : 80px;*/
 	display : block;
 	font-size : 50px;
 	margin-top : 50px;
@@ -310,6 +310,7 @@ nav {
 .li_active {
 	width : 100%;
 	height : 50px;
+	overflow: hidden;
 	display : block;
 	border-top : 1px solid #dcdcdc;
 	border-bottom : 1px solid #dcdcdc;

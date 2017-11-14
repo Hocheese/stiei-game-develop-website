@@ -51,7 +51,7 @@
                 </ul>
             </div>
         </div>
-        <script src="../jq/jquery-1.11.3.min.js" type="text/javascript"></script>
+        
         <script src="../jq/wySilder.min.js" type="text/javascript"></script>
         <script>
             $(function (){
