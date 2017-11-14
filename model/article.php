@@ -25,4 +25,9 @@ function article_list(int $start,int $list){
 	$rel=$db->query("SELECT * FROM `article` LIMIT $start,$list");
 	return $rel;
 }
+function article_get(int $id){
+	$db=new Database();
+	$rel=$db->query("SELECT * FROM `article` WHERE `id`=".$id);
+	return $rel;
+}
 ?>

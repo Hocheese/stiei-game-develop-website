@@ -1,11 +1,14 @@
-{tpl:header}
+<?php if(!defined("TOKEN")){
+	header("HTTP/1.1 403 Forbidden");
+	exit("Access Forbidden");
+} ?><?php include("cache/e0e10ea2f5e61d625f8a51960fb3de15.php"); ?>
         <div class = "main_cent">
             <div class="js-silder" style="height: 419px;">
                 <div class="silder-scroll">
-                    <div class="silder-main" style="height: 100%">{? foreach($ids as $v){ ?}
+                    <div class="silder-main" style="height: 100%"><?php foreach($ids as $v){ ?>
                         <div class="silder-main-img">
-                            <img src="?ctrl=image&act=get&id={$v["id"]}" alt="图片">
-						</div>{? } ?}
+                            <img src="?ctrl=image&act=get&id=<?php echo $v["id"]; ?>" alt="图片">
+						</div><?php } ?>
                     </div>
                 </div>
             </div>

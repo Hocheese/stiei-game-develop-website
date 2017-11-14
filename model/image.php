@@ -76,4 +76,9 @@ function image_count(){
 	return $rel;
 }
 
+function image_getNewFour(){
+	$db=new Database();
+	$rel=$db->query("SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4");;
+	return $rel["data"];
+}
 ?>

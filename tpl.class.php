@@ -31,14 +31,14 @@ class Tpl{
 				}
 				$handle=fopen($this->tplPath,"rb");
 				$this->tplData=fread($handle,filesize($this->tplPath));
-				while(($tplInclude=preg_match('/{tpl:([a-zA-Z.\/]+)}/',$this->tplData,$matches))!=0){
+				while(($tplInclude=preg_match('/{tpl:([a-zA-Z.\/_]+)}/',$this->tplData,$matches))!=0){
 			
 					$tplobj=new Tpl($matches[1]);
 
 					if($tplobj->error!=0){
-						$this->tplData=preg_replace('/{tpl:([a-zA-Z.\/]+)}/',"<!--模板错误：-->\n<!--文件名：".'${1}'."-->\n<!--错误信息：".$tplobj->error.'-->',$this->tplData,1);
+						$this->tplData=preg_replace('/{tpl:([a-zA-Z.\/_]+)}/',"<!--模板错误：-->\n<!--文件名：".'${1}'."-->\n<!--错误信息：".$tplobj->error.'-->',$this->tplData,1);
 					}else{
-						$this->tplData=preg_replace('/{tpl:([a-zA-Z.\/]+)}/','<?php include("cache/'.md5($tplobj->tplPath).'.php"); ?>',$this->tplData,1);
+						$this->tplData=preg_replace('/{tpl:([a-zA-Z.\/_]+)}/','<?php include("cache/'.md5($tplobj->tplPath).'.php"); ?>',$this->tplData,1);
 					}
 				}
 				$this->tplData="<?php if(!defined(\"TOKEN\")){\r\n	header(\"HTTP/1.1 403 Forbidden\");\r\n	exit(\"Access Forbidden\");\r\n} ?>".$this->tplData;

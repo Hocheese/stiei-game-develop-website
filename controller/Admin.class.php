@@ -1,6 +1,6 @@
 <?php
 include("model/article.php");
-include("model/image.php");
+//include("model/image.php");
 include("model/team.php");
 include("InviteCode.class.php");
 class Admin extends Controller{
@@ -19,6 +19,7 @@ class Admin extends Controller{
 			if(!isset($_GET['act'])){
 				$tpl=new Tpl("admin/frame");
 				$tpl->display();
+				exit;
 			}
 			
 		}

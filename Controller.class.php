@@ -4,7 +4,7 @@ if(!defined("TOKEN")){
 	header("HTTP/1.1 403 Forbidden");
 	exit("Access Forbidden");
 }
-
+include("model/image.php");
 class Controller{
 	function __construct(){
 		
@@ -12,6 +12,11 @@ class Controller{
 	static function index(){
 		if(!isset($_SESSION["userData"])){
 			include("tpl/index.html");
+		}else{
+			$ids=image_getNewFour();
+			$tpl=new Tpl("main");
+			$tpl->assign("ids",$ids);
+			$tpl->display();
 		}
 	}
 	function __call($name,$arguments){
