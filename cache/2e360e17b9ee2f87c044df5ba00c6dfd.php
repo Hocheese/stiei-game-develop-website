@@ -8,6 +8,7 @@
 <title>社团网站_后台管理</title>
 <link rel="stylesheet" type="text/css" href="./css/admin/admin.css">
 <script src="jq/jquery-3.2.1.js"></script>
+<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -21,6 +22,7 @@
 			<li><a href="?ctrl=admin&act=image">图片管理</a></li>
 			<li><a href="?ctrl=admin&act=team">团队管理</a></li>
 			<li><a href="#">小贴士管理</a></li>
+			<li><a href="#">小工具</a></li>
 		</ul>
 	</nav>
 	<article>

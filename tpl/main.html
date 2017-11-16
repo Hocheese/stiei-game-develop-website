@@ -2,7 +2,7 @@
         <div class = "main_cent">
             <div class="js-silder" style="height: 419px;">
                 <div class="silder-scroll">
-                    <div class="silder-main" style="height: 100%">{? foreach($ids as $v){ ?}
+                    <div class="silder-main" style="height: 419px">{? foreach($ids as $v){ ?}
                         <div class="silder-main-img">
                             <img src="?ctrl=image&act=get&id={$v["id"]}" alt="图片">
 						</div>{? } ?}
@@ -10,41 +10,13 @@
                 </div>
             </div>
             <div class = "main_li_div" style = "border-right : 1px solid #DCDCDC;">
-                <ul>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
+                <ul id="left">
+                    
                 </ul>
             </div>
             <div class = "main_li_div">
-                <ul>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
-                    <a href = "#">
-                        <li class = "main_li">javascript</li>
-                    </a>
+                <ul id="right">
+                    
                 </ul>
             </div>
         </div>
@@ -62,6 +34,13 @@
                     activeClass: "active",//小的控制按钮激活的样式，不包括作用两边，默认active
                 });
             });
+				
+whq_ajax("?ctrl=article&act=active&opt=list&start="+0+"&num="+5,function(k,v){
+	$("#left").before('<a href = "?ctrl=article&act=read&id='+v.id+'" ><li class = "main_li">['+v.name+']'+v.title+'</li></a>');
+})
+whq_ajax("?ctrl=article&act=active&opt=list&start="+5+"&num="+5,function(k,v){
+	$("#right").before('<a href = "?ctrl=article&act=read&id='+v.id+'" ><li class = "main_li">['+v.name+']'+v.title+'</li></a>');
+})
         </script>
     </body>
 </html>

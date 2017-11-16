@@ -51,7 +51,7 @@ class User extends Controller{
 	}
 	
 	public function reg(){
-		
+		header("Content-type: application/json");
 		if(!isset($_POST["password"])){
 			$rel["error"]=4;
 			$rel["data"]="未接收到必须的password参数。你是……信安专业的同学？？";
@@ -72,6 +72,7 @@ class User extends Controller{
 	
 	public function login(){
 		//echo $_POST['usercode'];
+		header("Content-type: application/json");
 		if(!isset($_POST['usercode'])||!isset($_POST['password'])){
 			$rel["error"]=4;
 			$rel["data"]="未接收到提交的参数。你是……信安专业的同学？？";
@@ -102,6 +103,7 @@ class User extends Controller{
 	
 	
 	public function prolist(){
+		header("Content-type: application/json");
 		$prolist=get_col_list();
 		if($prolist['error']!=0){
 			$rel=$prolist;
@@ -111,10 +113,11 @@ class User extends Controller{
 				$cid=$v['college'];
 				$id=$v['id'];
 				if($cid==0){
-					;
+					$rel['college'][$id]['id']=$v["id"];
 					$rel['college'][$id]['name']=$v["name"];
 					
 				}else{
+					//如果有这个id的二级学院
 					if(isset($rel['college'][$cid])){
 						$rel['college'][$cid]['pro']=array();
 						$i=count($rel['college'][$cid]['pro']);
@@ -122,6 +125,7 @@ class User extends Controller{
 						$rel['college'][$cid]['pro'][$i]['name']=$v["name"];
 					}else{
 						$rel['college'][0]['name']="学院直辖专业";
+						$rel['college'][0]['id']=0;
 						$i=count($rel['college'][0]['pro']);
 						$rel['college'][0]['pro'][$i]['id']=$id;
 						$rel['college'][0]['pro'][$i]['name']=$v["name"];
@@ -134,6 +138,7 @@ class User extends Controller{
 	}
 	
 	public function punchin(){
+		header("Content-type: application/json");
 		if(!isset($_SESSION["userData"])){
 			$rel['error']=4;
 			$rel["data"]="用户未登录";
@@ -148,6 +153,7 @@ class User extends Controller{
 	}
 	
 	public function userinfo(){
+		header("Content-type: application/json");
 		if(!isset($_GET['acode'])){
 			if(!isset($_SESSION["userData"])){
 				$rel["error"]=3;

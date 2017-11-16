@@ -15,4 +15,41 @@
 		<p id="usercode"></p>
 	</form>
 </div>
+<div>
+	<h1>用户列表</h1>
+	<table>
+		<tr>
+			<td>账号</td>
+			<td>邮箱</td>
+			<td>设为管理</td>
+			<td>姓名</td>
+			<td>性别</td>
+			<td>学号</td>
+			<td>专业</td>
+			<td>注册时间</td>
+		</tr>
+		
+		<form>
+			<tr>
+				<td><input name="" type="number" placeholder="账号"></td>
+				<td><input type="email" placeholder="邮箱"></td>
+				<td><input type="password" placeholder="密码"></td>
+				<td><input type="text" placeholder="姓名"></td>
+				<td><select>
+					<option value="0">无</option>
+					<option value="1">男</option>
+					<option value="2">女</option>
+					<option value="3">双性</option>
+					<option value="4">mtf</option>
+					<option value="5">ftm</option>
+					<option value="6">cd</option>
+					<option value="7">其它</option>
+				</select></td>
+				<td><input type="number" placeholder="学号"></td>
+				<td><select name=""></select></td>
+				<td><button>添加用户</button></td>
+			</tr>
+		</form>
+	</table>
+</div>
 {tpl:admin/footer}

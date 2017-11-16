@@ -68,6 +68,16 @@ class Admin extends Controller{
 				}
 				break;
 			case "del":
+				$this->root("删除专业或二级学院");
+				if(empty($_GET["id"])){
+					$this->error("未获取id");
+				}else{
+					
+				}
+				break;
+			case "add":
+				$this->root("添加专业或二级学院");
+				break;
 		}
 	}
 	
@@ -91,6 +101,7 @@ class Admin extends Controller{
 				echo $code->inviteCode_create();
 				break;
 			case "add":
+				//if()
 			case "del":
 		}
 	}
@@ -238,6 +249,14 @@ class Admin extends Controller{
 		$tpl->assign("info",$info);
 		$tpl->display();
 		exit;
+	}
+	
+	private function root(String $name){
+		if($_SESSION['userData']["admin"]!=1){
+			$this->error($_SESSION['userData']["realname"]."同志正在尝试“".$name."”，但TA没有这么做的权力。");
+		}else{
+			output_log("敏感操作",$name);
+		}
 	}
 	
 }

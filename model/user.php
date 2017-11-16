@@ -9,6 +9,11 @@ function account_code_available(int $num){
 	$rel=$db->query("SELECT * FROM `user` WHERE `account_code`=".$accountCode);
 	return $rel["error"]==2;
 }
+//删除专业
+function del_pro(int $id){
+	$db=new Database();
+	$rel=$db->query("SELECT * FROM `user` WHERE `account_code`=".$accountCode);
+}
 /*
 获取二级学院列表
 参数：无
