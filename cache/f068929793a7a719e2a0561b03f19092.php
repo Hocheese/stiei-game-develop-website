@@ -1,13 +1,16 @@
-
+<?php if(!defined("TOKEN")){
+	header("HTTP/1.1 403 Forbidden");
+	exit("Access Forbidden");
+} ?>
             </div>
             <div class = "_list">
-                <ul>{? if(!empty($_SESSION['userData']["admin"])){ ?}
+                <ul><?php if(!empty($_SESSION['userData']["admin"])){ ?>
                     <a href = "#" class = "butt_list">
                         <li class = "li_list">
                             <span style = "font-size : 24px;">管理中心</span>
                         </li>
                     </a>
-                    {? } ?}
+                    <?php } ?>
                     <a href = "#" class = "butt_list">
                         <li class = "li_list">
                             <span style = "font-size : 24px;">个人中心</span>
@@ -23,9 +26,9 @@
                             <span style = "font-size : 24px;">开发组队</span>
                         </li>
                     </a>
-                    <a href = "?ctrl=user{? if(!empty($_SESSION['userData']["id"])){ ?}&act=logout{? } ?}#" class = "butt_list">
+                    <a href = "?ctrl=user<?php if(!empty($_SESSION['userData']["id"])){ ?>&act=logout<?php } ?>#" class = "butt_list">
                         <li class = "li_list">
-                            <span style = "font-size : 24px;">{? if(!empty($_SESSION['userData']["id"])){ ?}注销{? } ?}登录</span>
+                            <span style = "font-size : 24px;"><?php if(!empty($_SESSION['userData']["id"])){ ?>注销<?php } ?>登录</span>
                         </li>
                     </a>
                 </ul>

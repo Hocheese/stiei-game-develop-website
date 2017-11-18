@@ -1,7 +1,8 @@
 <?php
 /*
+小青易测模板引擎v2.0
 包括文件：{tpl:header.html}(以tpl目录为根目录的相对路径)
-输出变量：{$username}{$var['a']}
+输出变量：{$username}{$var.a}{$var['a']}
 一般语法：{? echo "hello World!"; ?}
 
 
@@ -42,6 +43,12 @@ class Tpl{
 					}
 				}
 				$this->tplData="<?php if(!defined(\"TOKEN\")){\r\n	header(\"HTTP/1.1 403 Forbidden\");\r\n	exit(\"Access Forbidden\");\r\n} ?>".$this->tplData;
+				preg_match_all('/\{\$[\_a-zA-Z]([\.\_a-zA-Z0-9]*)\}/',$this->tplData,$a);
+				foreach($a as $v){
+					$b=preg_replace('/\.([\_a-zA-Z0-9]*)/','["$1"]',$v);
+					$this->tplData=str_replace($v,$b,$this->tplData);
+					
+				}
 				$this->tplData=preg_replace('/{\$([a-zA-Z0-9_\[\$\]\'"]+)}/','<?php echo \$${1}; ?>',$this->tplData);
 				/*$this->tplData=preg_replace('/{\?(\s(\S)+\s)+\?}/','<?php ${1} ?>',$this->tplData);*/
 				/*$this->tplData=preg_replace('/(?=({\?))$(.*)(?=(\?}))/','<?php ${2} ?>',$this->tplData);*/

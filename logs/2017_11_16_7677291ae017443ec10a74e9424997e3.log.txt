@@ -32,3 +32,165 @@
 [12:42:03][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
 [12:44:22][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
 [12:46:25][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[13:46:26][SQL]执行SQL语句：SELECT * FROM `article` WHERE `id`=8
+[13:46:29][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[13:53:01][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[13:53:03][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[13:53:03][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[13:53:03][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[13:53:03][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[13:53:04][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[13:53:04][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,5
+[13:53:04][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[13:53:10][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[13:53:40][SQL]执行SQL语句：SELECT * FROM `article` WHERE `id`=8
+[14:08:34][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:11:06][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:14:51][敏感操作]添加专业或二级学院
+[14:15:27][敏感操作]添加专业或二级学院
+[14:15:27][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES (电子技术与工程学院,0)
+[14:15:27][SQL错误]Unknown column '电子技术与工程学院' in 'field list'
+[14:15:31][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:15:36][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:16:48][敏感操作]添加专业或二级学院
+[14:16:48][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('电子技术与工程学院',0)
+[14:16:50][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:17:35][敏感操作]添加专业或二级学院
+[14:17:35][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('机械与能源工程学院',0)
+[14:17:39][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:17:52][敏感操作]添加专业或二级学院
+[14:17:52][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('经济与管理学院',0)
+[14:17:53][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:18:03][敏感操作]添加专业或二级学院
+[14:18:03][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('中德工程学院',0)
+[14:18:11][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:18:16][敏感操作]添加专业或二级学院
+[14:18:16][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('设计与艺术学院',0)
+[14:18:18][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:18:30][敏感操作]添加专业或二级学院
+[14:18:30][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('外语学院',0)
+[14:18:32][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:18:45][敏感操作]删除专业或二级学院
+[14:18:45][SQL]执行SQL语句：DELETE FROM `sys_profession` WHERE `id`=2
+[14:18:47][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:19:00][敏感操作]添加专业或二级学院
+[14:19:00][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('通信技术',1)
+[14:19:01][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:19:20][敏感操作]添加专业或二级学院
+[14:19:20][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('移动通信技术',1)
+[14:19:21][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:24:11][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:25:10][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:25:43][敏感操作]添加专业或二级学院
+[14:25:43][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('建筑智能化工程技术(楼宇智能化方向)',1)
+[14:25:44][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:26:06][敏感操作]添加专业或二级学院
+[14:26:06][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('移动互联应用技术',1)
+[14:26:08][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:26:25][敏感操作]添加专业或二级学院
+[14:26:25][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('计算机应用技术',1)
+[14:26:27][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:26:45][敏感操作]添加专业或二级学院
+[14:26:45][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('计算机网络技术',1)
+[14:26:46][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:27:18][敏感操作]添加专业或二级学院
+[14:27:18][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('软件技术',1)
+[14:27:26][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:27:34][敏感操作]添加专业或二级学院
+[14:27:34][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('信息安全与管理(高本贯通)',1)
+[14:27:36][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:28:02][敏感操作]添加专业或二级学院
+[14:28:02][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('信息安全与管理',1)
+[14:28:04][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:28:25][敏感操作]添加专业或二级学院
+[14:28:25][SQL]执行SQL语句：INSERT INTO `sys_profession`( `name`, `college`) VALUES ('物联网工程技术',1)
+[14:28:27][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[14:31:12][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:44:47][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:44:55][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:45:50][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:48:53][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:48:55][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:49:17][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:49:23][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:50:26][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:50:28][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:51:45][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:51:47][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:55:11][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[18:55:14][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[19:00:09][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[19:00:11][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[19:07:08][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[19:07:12][SQL]执行SQL语句：SELECT * FROM `article_class`
+[19:07:12][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[19:07:13][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[19:37:48][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[19:37:50][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[19:37:53][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[19:41:25][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[19:41:36][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[19:41:41][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=
+[19:41:41][SQL错误]You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+[19:42:33][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=10
+[19:42:49][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100001
+[19:43:31][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100000
+[19:43:35][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100001
+[19:44:13][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100000
+[19:44:17][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100001
+[19:47:00][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100002
+[19:47:04][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100001
+[19:47:14][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100002
+[19:47:15][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100001
+[19:47:16][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100002
+[19:47:17][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=100003
+[19:47:45][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=888888
+[19:48:02][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[19:48:02][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[19:48:03][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[19:48:03][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[19:48:03][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[19:48:04][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[19:48:04][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,5
+[19:48:07][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:46:47][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:46:51][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:47:04][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=888888
+[20:47:52][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[20:47:52][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[20:47:52][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[20:47:52][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[20:47:53][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[20:47:53][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[20:47:53][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,5
+[20:48:00][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:48:56][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:48:59][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:49:06][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=888888
+[20:49:36][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[20:49:36][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[20:49:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[20:49:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[20:49:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[20:49:38][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[20:49:38][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,5
+[20:49:48][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:50:06][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:50:09][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:50:15][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=888888
+[20:56:32][SQL]执行SQL语句：INSERT INTO `user`(`account_code`, `password`, `email`,  `realname`, `sex`, `study_code`, `profession`, `timeline`) VALUES ('888888','$2y$10$JSTYi4IQufp0jvGoh.j8quCAzC4NOhTkkoyRAnhBA4agLjk9enPEq','2653591247@qq.com','王贺青','1','2016131321','15','1510836992')
+[20:56:32][管理模块错误]用户添加失败。错误信息：1
+[21:01:26][通知]访问了测试文件
+[21:01:48][SQL]执行SQL语句：SELECT * FROM `user` WHERE `account_code`=888888
+[21:02:02][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:02:06][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:02:41][管理模块错误]王贺青同志正在尝试“添加专业或二级学院”，但他没有这么做的权力。
+[21:02:51][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:10:07][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:24:30][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:24:30][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:25:40][管理模块错误]王贺青同志正在尝试“删除专业或二级学院”，但他没有这么做的权力。
+[21:28:14][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:30:21][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:30:22][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:55:28][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 

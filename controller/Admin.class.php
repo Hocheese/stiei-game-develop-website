@@ -2,6 +2,7 @@
 include("model/article.php");
 //include("model/image.php");
 include("model/team.php");
+include("model/user.php");
 include("InviteCode.class.php");
 class Admin extends Controller{
 	private $opt;
@@ -72,11 +73,21 @@ class Admin extends Controller{
 				if(empty($_GET["id"])){
 					$this->error("未获取id");
 				}else{
-					
+					$r=del_pro((int)$_GET["id"]);
+					$r["error"]==0?$this->success("删除成功"):$this->error($r["data"]);
 				}
 				break;
 			case "add":
 				$this->root("添加专业或二级学院");
+				if(empty($_POST["name"])){
+					$this->error("未接收到参数");
+				}else{
+					$cid=empty($_POST["college"])?0:(int)$_POST["college"];
+					add_pro($_POST["name"],$cid);
+					$this->success("添加专业成功");
+				}
+				
+				
 				break;
 		}
 	}
@@ -96,13 +107,28 @@ class Admin extends Controller{
 				$tpl->display();
 				break;
 			case "code":
-				$code=isset($_GET["code"])?$_GET["code"]:0;
+				$code=empty($_GET["code"])?0:(int)$_GET["code"];
 				$code=new InviteCode($code);
 				echo $code->inviteCode_create();
 				break;
 			case "add":
-				//if()
+				$data=array();
+				foreach($_POST as $k =>$v){
+					$data[$k]=$v;
+				}
+				$data["profession"]=empty($_POST["pro"])?$_POST["col"]:$_POST["pro"];
+				$rel=reg($data);
+				if($rel["error"]==0){
+					$this->success("用户添加成功");
+				}else{
+					$this->error("用户添加失败。错误信息：".$rel["data"]);
+				}
+				break;
 			case "del":
+			case "check":
+				$id=empty($_GET["id"])?0:(int)$_GET["id"];
+				echo json_encode(account_code_available($id)) ;
+				break;
 		}
 	}
 	
@@ -253,7 +279,7 @@ class Admin extends Controller{
 	
 	private function root(String $name){
 		if($_SESSION['userData']["admin"]!=1){
-			$this->error($_SESSION['userData']["realname"]."同志正在尝试“".$name."”，但TA没有这么做的权力。");
+			$this->error($_SESSION['userData']["realname"]."同志正在尝试“".$name."”，但他没有这么做的权力。");
 		}else{
 			output_log("敏感操作",$name);
 		}

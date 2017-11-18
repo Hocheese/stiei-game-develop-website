@@ -11,11 +11,11 @@
 		</tr>
 		{? foreach($teams as $v){ ?}
 		<tr>
-			<td>{$v['id']}</td>
-			<td>{$v['tname']}</td>
-			<td>{$v['tcreator']}</td>
-			<td>{$v['realname']}</td>
-			<td>{$v['timeline']}</td>
+			<td>{$v.id}</td>
+			<td>{$v.tname}</td>
+			<td>{$v.tcreator}</td>
+			<td>{$v.realname}</td>
+			<td>{$v.timeline}</td>
 		</tr>
 		{? } ?}
 		<form action="?ctrl=admin&act=team&opt=add" method="post">

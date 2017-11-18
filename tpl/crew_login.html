@@ -29,9 +29,9 @@
                 <span id = "_tit"><b>上舰认证</b></span>
             </div>
             <div id = "_login">
-                <form method = "POST" action = "#">
-                    <input type = "text" placeholder = "输入你的ID/邮箱" id = "_user" class = "user_s" value = "" /><span id = "u_prompt">QAQ~还没认证不能上舰哦~</span><br />
-                    <input type = "password" placeholder = "密码" id = "_pwd" class = "pwd_s" value = "" /><span id = "s_prompt" style = "display : none;">是不是有些东西还没输入呢~</span><br />
+                <form method = "POST" action = "#" onSubmit="return false;">
+                    <input type = "text" placeholder = "输入你的ID/邮箱" id = "_user" class = "user_s" value = "" style="border-color: currentColor"/><span id = "u_prompt" style="display: none;">QAQ~还没认证不能上舰哦~</span><br />
+                    <input type = "password" placeholder = "密码" id = "_pwd" class = "pwd_s" value = "" style="border-color: currentColor"/><span id = "s_prompt" style = "display : none;">是不是有些东西还没输入呢~</span><br />
                     <div id = "_verif"></div>
                     <div id = "_reme">
                         <label>
@@ -83,10 +83,34 @@
             </div>
         </div>
         <script src = "../jq/jquery-1.11.0.min.js"></script>
-        <script src = "../jq/jquery.thoughtBubble.js"></script>
-        <script src = "../js/slide.js"></script>
+		<script>
+		$("#l_button").click(function(){
+			var user=$("#_user").val();
+			var pwd=$("#_pwd").val();
+			$.post("?ctrl=user&act=login",{usercode:user,password:pwd}).done(function(data){
+				if(data.error==0){
+					window.location="/";
+				}else if(data.error==2){
+					$("#s_prompt").attr("style","display:none;")
+					$("#u_prompt").text(data.data);
+					$("#u_prompt").attr("style","display:inline;")
+					$("#_user").attr("style","color:#FA237D;")
+				}else{
+					//alert("登录失败："+data.data+"\n如有疑问，请联系网站技术负责人王贺青（QQ：2653591247）");
+					$("#s_prompt").text(data.data);
+					$("#s_prompt").attr("style","display:inline;")
+					$("#u_prompt").attr("style","display:none;")
+					$("#_pwd").attr("style","color:#FA237D;")
+				}
+				
+			})
+		})
+		
+		</script>
+        <!--script src = "../jq/jquery.thoughtBubble.js"></script>
+        <!--script src = "../js/slide.js"></script>
         <!-- <script src = "../js/onMous.js"></script> -->
-        <script src = "../js/slide_val.js"></script>
-        <script src = "../js/menu.js"></script>
+        <!--script src = "../js/slide_val.js"></script-->
+        <!--script src = "../js/menu.js"></script-->
     </body>
 </html>

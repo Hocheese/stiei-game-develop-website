@@ -119,7 +119,7 @@ class User extends Controller{
 				}else{
 					//如果有这个id的二级学院
 					if(isset($rel['college'][$cid])){
-						$rel['college'][$cid]['pro']=array();
+						$rel['college'][$cid]['pro']=empty($rel['college'][$cid]['pro'])?array():$rel['college'][$cid]['pro'];
 						$i=count($rel['college'][$cid]['pro']);
 						$rel['college'][$cid]['pro'][$i]['id']=$id;
 						$rel['college'][$cid]['pro'][$i]['name']=$v["name"];
@@ -166,7 +166,10 @@ class User extends Controller{
 		}
 		echo json_encode($rel);
 	}
-	
+	public function logout(){
+		unset($_SESSION['userData']);
+		header("Location:/");
+	}
 	
 }
 ?>

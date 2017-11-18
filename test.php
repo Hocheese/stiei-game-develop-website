@@ -26,6 +26,14 @@ if(isset($_FILES['file'])){
 $time=time();
 echo "<strong>time:$time</strong>,<strong>".password_hash(md5(md5("123456").$time),PASSWORD_DEFAULT)."</strong>";
 unset($_SESSION['verCode']);
+
+$str='sddsfsd {$_SESSION.UserData.account_sasasa} sdff {$a} dsdfs';
+echo preg_match('/\{\$[\_a-zA-Z]([\.\_a-zA-Z0-9]*)\}/',$str,$a);
+$b=preg_replace('/\.([\_a-zA-Z0-9]*)/','["$1"]',$a[0]);
+$c=preg_replace('/\{\$([\_a-zA-Z][\_a-zA-Z0-9]*)(\.([\_a-zA-Z0-9]*))*\}/','<?php echo $1["$0"] ?>',$a[0]);
+var_dump($a);
+var_dump($b);
+var_dump($c);
 ?>
 <!doctype html>
 <html>

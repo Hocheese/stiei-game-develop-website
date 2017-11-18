@@ -92,6 +92,7 @@ function is_low_cha(String $str){
 		if(ord($a)<48||ord($a)>57){
 			return false;
 		}
+		$i++;
 	}
 	return true;
 }
@@ -106,6 +107,7 @@ function is_num_cha(String $str){
 		if(ord($a)<97||ord($a)>122){
 			return false;
 		}
+		$i++;
 	}
 	return true;
 }
@@ -120,6 +122,7 @@ function is_num_letter(String $str){
 		if(!is_num_cha($a)&&!is_low_cha($a)&&!is_cap_cha($a)){
 			return false;
 		}
+		$i++;
 	}
 	return true;
 }

@@ -9,7 +9,7 @@
 	<ul id="pro_list">
 		
 	</ul>
-	<form action="" method="post">
+	<form action="?ctrl=admin&act=basic&opt=add" method="post">
 	<h2>添加二级学院/专业<small>（进行操作需要root权限）</small></h2>
 		<input name="name" type="text" placeholder="二级学院/专业名称">
 		二级学院：<select name="college" id="pro_slt">
@@ -27,9 +27,9 @@ $.getJSON("/?ctrl=user&act=prolist").done(function(data){
 	if(data.error==0){
 		$.each(data.college,function(k,v){
 			$("#pro_slt").append('<option value="'+v.id+'">'+v.name+'</option>');
-			$("#pro_list").append('<li  id="c'+v.id+'">'+v.name+'<a class="a_art" href="#">删除</a><ul class="flexcol"  id="p'+v.id+'"></ul></li>');
+			$("#pro_list").append('<li  id="c'+v.id+'">'+v.name+'<a class="a_art" href="?ctrl=admin&act=basic&opt=del&id='+v.id+'">删除</a><ul class="flexcol"  id="p'+v.id+'"></ul></li>');
 			$.each(v.pro,function(ke,va){
-				$("#p"+v.id).append('<li>'+va.name+'<a class="a_art" href="#">删除</a></li>');
+				$("#p"+v.id).append('<li>'+va.name+'<a class="a_art" href="?ctrl=admin&act=basic&opt=del&id='+va.id+'">删除</a></li>');
 			})
 		});
 	}else if(data.error==2){

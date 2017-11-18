@@ -1,8 +1,8 @@
 {tpl:header}
         <div class = "main_cent">
-            <div class="js-silder" style="height: 419px;">
+            <div class="js-silder">
                 <div class="silder-scroll">
-                    <div class="silder-main" style="height: 419px">{? foreach($ids as $v){ ?}
+                    <div class="silder-main">{? foreach($ids as $v){ ?}
                         <div class="silder-main-img">
                             <img src="?ctrl=image&act=get&id={$v["id"]}" alt="图片">
 						</div>{? } ?}
@@ -38,9 +38,11 @@
 whq_ajax("?ctrl=article&act=active&opt=list&start="+0+"&num="+5,function(k,v){
 	$("#left").before('<a href = "?ctrl=article&act=read&id='+v.id+'" ><li class = "main_li">['+v.name+']'+v.title+'</li></a>');
 })
-whq_ajax("?ctrl=article&act=active&opt=list&start="+5+"&num="+5,function(k,v){
+whq_ajax("?ctrl=article&act=active&opt=list&start="+5+"&num="+10,function(k,v){
 	$("#right").before('<a href = "?ctrl=article&act=read&id='+v.id+'" ><li class = "main_li">['+v.name+']'+v.title+'</li></a>');
 })
+setTimeout(function(){$(".silder-main").attr("style","height: 419px;")},1000);
+
         </script>
     </body>
 </html>

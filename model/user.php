@@ -1,4 +1,10 @@
 <?php
+//添加专业或二级学院
+function add_pro(String $name,int $id=0){
+	
+	$db=new Database();
+	return $db->query("INSERT INTO `sys_profession`( `name`, `college`) VALUES ('$name',$id)");
+}
 /*
 检测账号是否可用
 参数：int $accountCode：账号
@@ -6,14 +12,16 @@
 */
 function account_code_available(int $num){
 	$db=new Database();
-	$rel=$db->query("SELECT * FROM `user` WHERE `account_code`=".$accountCode);
+	$rel=$db->query("SELECT * FROM `user` WHERE `account_code`=".$num);
 	return $rel["error"]==2;
 }
-//删除专业
+//删除专业或二级学院
 function del_pro(int $id){
 	$db=new Database();
-	$rel=$db->query("SELECT * FROM `user` WHERE `account_code`=".$accountCode);
+	return $db->query("DELETE FROM `sys_profession` WHERE `id`=".$id);
+	
 }
+
 /*
 获取二级学院列表
 参数：无
@@ -226,7 +234,7 @@ function punchin(int $accountCode){
 */
 function reg(array $regData){
 	$regData["timeline"]=time();
-	if(!isset($regData["password"])){
+	if(empty($regData["password"])){
 		$rel["error"]=3;
 		$rel["data"]="未接收到password参数";
 	}else{
@@ -237,11 +245,13 @@ function reg(array $regData){
 		$regData["sex"]=isset($regData["sex"])?(int)$regData["sex"]:0;
 		$regData["study_code"]=isset($regData["study_code"])?(int)$regData["study_code"]:0;
 		$regData["profession"]=isset($regData["profession"])?(int)$regData["profession"]:0;
+		if(empty($regData["account_code"])||$_SESSION['userData']["admin"]<=0){
+			do{
+				$num=rand_num_code($_CONFIG["sys"]["account_code_length"]);
+			}while(!account_code_available($_CONFIG["sys"]["account_code_length"]));
+			$regData["account_code"]=$num;
+		}
 		
-		do{
-			$num=rand_num_code($_CONFIG["sys"]["account_code_length"]);
-		}while(!account_code_available($_CONFIG["sys"]["account_code_length"]));
-		$regData["account_code"]=$num;
 		$db=new Database();
 		//累了，歇一歇
 		$rel=$db->query("INSERT INTO `user`(`account_code`, `password`, `email`,  `realname`, `sex`, `study_code`, `profession`, `timeline`) VALUES ('".$regData["account_code"]."','".$regData["password"]."','".$regData["email"]."','".$regData["realname"]."','".$regData["sex"]."','".$regData["study_code"]."','".$regData["profession"]."','".$regData["timeline"]."')");
