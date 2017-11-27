@@ -120,7 +120,7 @@ function get_user_info(int $accountCode){
 */
 function login(int $accountCode,String $passowrd){
 	$db=new Database();
-	$rel=$db->query("SELECT * FROM `user` WHERE `account_code`=".$accountCode);
+	$rel=$db->query("SELECT `user`.*,`teams_user`.`tid` FROM `user` LEFT JOIN `teams_user` ON `user`.`account_code`=`teams_user`.`uid`  WHERE `account_code`=".$accountCode);
 	if($rel["error"]==0){
 		$rel["data"]=$rel["data"][0];
 		if(password_verify(md5(md5($passowrd).$rel["data"]["timeline"]),$rel["data"]["password"])){

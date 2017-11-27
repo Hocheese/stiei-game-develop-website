@@ -1,4 +1,7 @@
-{tpl:active_header}
+<?php if(!defined("TOKEN")){
+	header("HTTP/1.1 403 Forbidden");
+	exit("Access Forbidden");
+} ?><?php include("cache/c1dd617e8d07d7e94cdd553247ee1f69.php"); ?>
 <style>
 	table{
 		border:none;
@@ -54,16 +57,16 @@
       <th scope="col">创建时间</th>
       <th scope="col">操作</th>
     </tr>
-    {? foreach($team as $v){ ?}
+    <?php foreach($team as $v){ ?>
     <tr>
-      <td>{$v.id}</td>
-      <td title="{$v.text}">{$v.tname}</td>
-      <td>{$v.realname}</td>
-      <td>{$v.time}</td>
-      <td><a href="?ctrl=team&act=join&id={$v.id}">加入</a></td>
+      <td><?php echo $v["id"]; ?></td>
+      <td title="<?php echo $v["text"]; ?>"><?php echo $v["tname"]; ?></td>
+      <td><?php echo $v["realname"]; ?></td>
+      <td><?php echo $v["time"]; ?></td>
+      <td><a href="?ctrl=team&act=join&id=<?php echo $v["id"]; ?>">加入</a></td>
     </tr>
-    {? } ?}
+    <?php } ?>
   </tbody>
 </table>
 
-{tpl:active_footer}
+<?php include("cache/f068929793a7a719e2a0561b03f19092.php"); ?>

@@ -1,0 +1,30 @@
+[15:41:49][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[15:41:49][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[15:41:49][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[15:41:50][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[15:41:50][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[15:41:51][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[15:41:51][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,10
+[15:41:52][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[15:41:54][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[15:41:57][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[15:44:15][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[15:46:15][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:04:46][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:04:49][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:04:53][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:04:55][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:04:56][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:04:58][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:05:00][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:05:00][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:05:03][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:05:09][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:11:09][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:12:20][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:12:31][SQL]执行SQL语句：INSERT INTO `teams_info`(`tname`,`tcreator`,`timeline`,`text`,`allowjoin`)VALUES('贝塔狗',100001,1511183551,'挑战AlphaGO',0)
+[21:12:32][SQL]执行SQL语句：SELECT `id` FROM `teams_info` WHERE `tcreator`=100001 AND `timeline`=1511183551
+[21:15:15][SQL]执行SQL语句：INSERT INTO `teams_info`(`tname`,`tcreator`,`timeline`,`text`,`allowjoin`)VALUES('贝塔狗',100001,1511183715,'挑战AlphaGO',0)
+[21:15:15][SQL]执行SQL语句：SELECT `id` FROM `teams_info` WHERE `tcreator`=100001 AND `timeline`=1511183715
+[21:15:15][SQL]执行SQL语句：INSERT INTO `teams_user`(`tid`,`uid`)VALUES(4,100001)
+[21:15:18][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`

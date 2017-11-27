@@ -219,6 +219,13 @@ class Admin extends Controller{
 				$this->success("队伍创建成功");
 				break;
 			case "del":
+				$id=empty($_GET["id"])?"0":$_GET["id"];
+				team_del($id);
+				$this->success("队伍删除成功");
+				break;
+			case "lst":
+				echo json_encode(team_ulist((int)$_GET["id"]));
+				break;
 		}
 	}
 	function image(){

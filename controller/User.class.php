@@ -1,5 +1,6 @@
 <?php
 include("model/user.php");
+include("InviteCode.class.php");
 class User extends Controller{
 	public static function index(){
 		if(!isset($_SESSION["userData"])){
@@ -62,8 +63,17 @@ class User extends Controller{
 			$regData["sex"]=isset($_POST["sex"])?$_POST["sex"]:0;
 			$regData["study_code"]=isset($_POST["study_code"])?$_POST["study_code"]:0;
 			$regData["profession"]=isset($_POST["profession"])?$_POST["profession"]:0;
+			$icd=empty($_POST["icd"])?"":$_POST["icd"];
+			$ic=new InviteCode($regData["study_code"]);
+			if($ic->inviteCode_check($icd)){
+				$rel=reg($regData);
+			}else{
+				$rel["error"]=5;
+				$rel["data"]="邀请码错误";
+			}
 			
-			$rel=reg($regData);
+			
+			
 			//累了，歇一歇
 		}
 		echo json_encode($rel);
@@ -169,6 +179,9 @@ class User extends Controller{
 	public function logout(){
 		unset($_SESSION['userData']);
 		header("Location:/");
+	}
+	public function join(){
+		include("tpl/reg.html");
 	}
 	
 }

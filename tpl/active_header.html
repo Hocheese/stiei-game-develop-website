@@ -1,7 +1,8 @@
 {tpl:header}
        
-       {? $title=isset($info)?$info["title"]:"活动"  ?}
+       {? $title=isset($title)?$title:(isset($info)?$info["title"]:"活动")  ?}
         <div class = "main_cent">
             <div class = "_active">
                 <span id = "tit_active">{$title}</span>
+                <hr>
                 

@@ -39,7 +39,7 @@ function day_of_month(int $month=0){
 */
 function is_email(String $str){
 	$i=0;
-	while(($a=substr($str,$i,1))!="@"){
+	while(($a=substr($str,$i,1))!="@" && strlen($str)>=$i ){
 		if(!is_num_letter($a)&&$a!="_"&&$a!="-"){
 			return false;
 		}
@@ -149,13 +149,16 @@ function rand_num_code(int $len){
 	$num="";
 	while(strlen($num)<$len){
 		$i=rand(0,9);
+		//开头不为0
 		if(strlen($num)==0&&$i==0){
-			$i="";
+			continue;
 		}
 		if(strlen($num)>=2){
-			if(($i-substr($num,-1,1))!=($i-substr($num,-2,1))){
+			if(($i-(int)substr($num,-1,1))!=((int)substr($num,-1,1)-(int)substr($num,-2,1))){
 				$num.=$i;
 			}
+		}else{
+			$num.=$i;
 		}
 		
 	}

@@ -1,0 +1,132 @@
+[20:41:44][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[20:41:44][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[20:41:44][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[20:41:45][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[20:41:45][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[20:41:46][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,10
+[20:41:46][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[20:41:46][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[20:41:46][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[20:41:47][SQL]执行SQL语句：SELECT * FROM `article` WHERE `id`=5
+[20:41:50][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[20:41:51][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[20:42:00][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[20:42:11][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[20:42:13][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[20:42:37][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[20:42:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[20:42:37][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[20:42:38][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[20:42:38][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[20:42:38][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[20:42:38][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,10
+[20:42:38][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[20:42:42][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:14:30][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:19:49][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:20:22][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:20:24][SQL]执行SQL语句：SELECT * FROM `teams_user` WHERE `uid` = 100001
+[21:20:27][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:20:28][SQL]执行SQL语句：SELECT * FROM `teams_user` WHERE `uid` = 100001
+[21:20:29][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:21:39][SQL]执行SQL语句：SELECT * FROM `teams_user` WHERE `uid` = 100001
+[21:21:39][SQL]执行SQL语句：INSERT INTO `teams_user`(`tid`,`uid`)VALUES(1,100001)
+[21:21:43][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:21:45][SQL]执行SQL语句：SELECT * FROM `teams_user` WHERE `uid` = 100001
+[21:21:47][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:22:16][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[21:22:30][SQL]执行SQL语句：SELECT `user`.*,`teams_user`.`tid` FROM `user` LEFT JOIN `teams_user` ON `user`.`account_code`=`teams_user`.`uid`  WHERE `account_code`=888888
+[21:22:30][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[21:22:30][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[21:22:30][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[21:22:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[21:22:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[21:22:31][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[21:22:31][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,10
+[21:22:31][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[21:22:34][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:22:55][SQL]执行SQL语句：INSERT INTO `teams_info`(`tname`,`tcreator`,`timeline`,`text`,`allowjoin`)VALUES('贝塔狗',888888,1511356975,'挑战AlphaGO！',0)
+[21:22:56][SQL]执行SQL语句：SELECT `id` FROM `teams_info` WHERE `tcreator`=888888 AND `timeline`=1511356975
+[21:22:56][SQL]执行SQL语句：INSERT INTO `teams_user`(`tid`,`uid`)VALUES(5,888888)
+[21:22:58][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:23:01][SQL]执行SQL语句：SELECT * FROM `teams_user` WHERE `uid` = 888888
+[21:23:04][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:24:15][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:24:43][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:24:43][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:24:45][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:24:46][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:24:48][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:24:48][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:24:48][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[21:24:50][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:24:51][SQL]执行SQL语句：SELECT * FROM `article_class`
+[21:24:51][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[21:25:07][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[21:25:10][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:25:13][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[21:25:14][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[21:25:21][SQL]执行SQL语句：SELECT * FROM `teams_user` WHERE `uid` = 888888
+[21:25:24][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:21:55][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:21:58][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:22:01][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:22:06][SQL]执行SQL语句：DELETE FROM `teams_user` WHERE `tid`=1
+[22:22:07][SQL]执行SQL语句：DELETE FROM `teams_info` WHERE `id`=1
+[22:22:09][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:22:16][SQL]执行SQL语句：DELETE FROM `teams_user` WHERE `tid`=3
+[22:22:16][SQL]执行SQL语句：DELETE FROM `teams_info` WHERE `id`=3
+[22:22:18][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:22:20][SQL]执行SQL语句：DELETE FROM `teams_user` WHERE `tid`=4
+[22:22:20][SQL]执行SQL语句：DELETE FROM `teams_info` WHERE `id`=4
+[22:22:22][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:22:27][管理模块错误]王贺青同志正在尝试“添加专业或二级学院”，但他没有这么做的权力。
+[22:22:30][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:22:32][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:22:38][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:22:43][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:22:44][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:22:44][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:22:44][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:22:45][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:22:47][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:22:48][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:22:48][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:22:48][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:22:49][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:22:49][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:22:50][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:22:54][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:22:56][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:22:57][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:22:58][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:22:58][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:23:01][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:23:01][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:23:02][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:23:04][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:23:04][SQL]执行SQL语句：SELECT * FROM `article_class`
+[22:23:04][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=0
+[22:23:05][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:23:05][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:23:07][SQL]执行SQL语句：SELECT * FROM `sys_profession` ORDER BY `college` 
+[22:23:14][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:23:18][SQL]执行SQL语句：SELECT * FROM `teams_user` WHERE `uid` = 888888
+[22:23:27][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[22:23:32][SQL]执行SQL语句：SELECT `user`.*,`teams_user`.`tid` FROM `user` LEFT JOIN `teams_user` ON `user`.`account_code`=`teams_user`.`uid`  WHERE `account_code`=100001
+[22:23:32][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[22:23:32][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[22:23:33][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[22:23:33][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[22:23:34][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[22:23:34][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[22:23:34][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,10
+[22:23:34][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[22:23:36][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:23:38][SQL]执行SQL语句：SELECT * FROM `teams_user` WHERE `uid` = 100001
+[22:23:38][SQL]执行SQL语句：INSERT INTO `teams_user`(`tid`,`uid`)VALUES(2,100001)
+[22:23:39][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:23:41][SQL]执行SQL语句：SELECT * FROM `teams_user` WHERE `uid` = 100001
+[22:23:44][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[22:23:45][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[22:26:15][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`

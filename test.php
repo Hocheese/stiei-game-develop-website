@@ -24,7 +24,7 @@ if(isset($_FILES['file'])){
 	var_dump(image_save()) ;
 }
 $time=time();
-echo "<strong>time:$time</strong>,<strong>".password_hash(md5(md5("123456").$time),PASSWORD_DEFAULT)."</strong>";
+echo "<strong>time:$time</strong>,<strong>".password_hash(md5(md5("HelloWorldDaFaHao123").$time),PASSWORD_DEFAULT)."</strong>";
 unset($_SESSION['verCode']);
 
 $str='sddsfsd {$_SESSION.UserData.account_sasasa} sdff {$a} dsdfs';
@@ -63,8 +63,9 @@ var_dump($c);
 	$code=new InviteCode(2017126115);
 	echo $code->inviteCode_create();
 	echo "</br>";
-	$code=new InviteCode(5201314);
+	$code=new InviteCode(2016138215);
 	echo $code->inviteCode_create();
+	echo rand_num_code(6);
 ?></p>
 
 <form method="post" action="/?ctrl=user&act=login">

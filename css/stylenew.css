@@ -61,14 +61,10 @@ a {
 }
 
 #_login {
-	width : 600px;
+	width : 1200px;
 	height : 300px;
-	margin-left : 50px;
-	margin-top : 50px;
-	/* border: 1px solid #000; */
-	border-right : 1px solid #DCDCDC;
-	float : left;
-	display : inline;
+	margin-top : 150px;
+	margin : auto;
 }
 
 .user_s {
@@ -185,7 +181,7 @@ a {
 	line-height : 40px;
 }
 
-#rl_button {
+#r_button {
 	width : 220px;
 	height : 40px;
 	font-size : 18px;
@@ -251,7 +247,7 @@ nav {
 }
 
 .main_cent {
-	width : 80%;
+	width : 85%;
 	height : 900px;
 	/* background-color : red; */
 	display : inline;
@@ -269,7 +265,6 @@ nav {
 	height : 200px;
 	display : inline;
 	float : left;
-	margin-top: 20px;
 }
 
 .main_li {
@@ -292,8 +287,8 @@ nav {
 }
 
 #tit_active {
-	/*width : 20%;
-	height : 80px;*/
+	width : 20%;
+	height : 80px;
 	display : block;
 	font-size : 50px;
 	margin-top : 50px;
@@ -311,7 +306,6 @@ nav {
 .li_active {
 	width : 100%;
 	height : 50px;
-	overflow: hidden;
 	display : block;
 	border-top : 1px solid #dcdcdc;
 	border-bottom : 1px solid #dcdcdc;
@@ -343,7 +337,8 @@ nav {
 	color : #fff;
 	margin-top : 20px;
 }
-/*reg*/
+
+/* reg */
 ._reg {
 	width : 400px;
 	height : 500px;

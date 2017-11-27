@@ -1,0 +1,7 @@
+[17:29:14][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[17:29:14][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[17:29:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[17:29:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[17:29:15][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[17:29:16][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[17:29:16][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,10

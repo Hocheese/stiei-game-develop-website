@@ -8,6 +8,7 @@
 			<td>队长账号</td>
 			<td>队长姓名</td>
 			<td>创建时间</td>
+			<td> 操作</td>
 		</tr>
 		{? foreach($teams as $v){ ?}
 		<tr>
@@ -16,6 +17,7 @@
 			<td>{$v.tcreator}</td>
 			<td>{$v.realname}</td>
 			<td>{$v.timeline}</td>
+			<td><a href="?ctrl=admin&act=team&opt=del&id={$v.id}">删除</a></td>
 		</tr>
 		{? } ?}
 		<form action="?ctrl=admin&act=team&opt=add" method="post">
@@ -31,5 +33,20 @@
 </div>
 <div>
 	<h1>成员列表</h1>
+	<select id="t_l">
+		<option value="0">请选择队伍</option>
+		{? foreach($teams as $v){ ?}
+		<option value="{$v.id}">{$v.tname}</option>
+		{? } ?}
+	</select>
+	<ul id="s_v"></ul>
 </div>
+<script>
+$("#t_l").change(function(){
+	$("#s_v").empty();
+	whq_ajax("?ctrl=admin&act=team&opt=lst&id="+$("#t_l").val(),function(k,v){
+		$("#s_v").append("<li>"+v.realname+"</li>")
+	})
+})
+</script>
 {tpl:admin/footer}

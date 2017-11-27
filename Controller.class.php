@@ -37,5 +37,11 @@ class Controller{
 			$actClass->$act();
 		}
 	}
+	
+	function info(array $info){
+		$tpl=new Tpl("info");
+		$tpl->assign("info",$info);
+		$tpl->display();
+	}
 }
 ?>

@@ -1,0 +1,21 @@
+[15:19:17][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[15:19:18][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[15:19:18][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[15:19:19][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[15:19:19][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[15:19:19][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,10
+[15:19:19][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[15:19:20][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[15:19:22][SQL]执行SQL语句：SELECT * FROM `article` WHERE `id`=9
+[15:19:24][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[18:26:30][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[18:26:31][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
+[18:27:30][SQL]执行SQL语句：SELECT `id` FROM `image` ORDER BY `id` DESC LIMIT 0,4
+[18:27:30][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=12
+[18:27:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=11
+[18:27:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=9
+[18:27:31][SQL]执行SQL语句：SELECT * FROM `image` WHERE `id`=10
+[18:27:32][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,5
+[18:27:32][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 5,10
+[18:27:41][SQL]执行SQL语句：SELECT `article`.* ,`article_class`.`name` FROM `article` LEFT JOIN `article_class` ON `article`.`cid`=`article_class`.`id` ORDER BY `id` DESC LIMIT 0,10
+[18:27:43][SQL]执行SQL语句：SELECT `teams_info`.*,`user`.`realname` FROM `teams_info` LEFT JOIN `user` ON `teams_info`.`tcreator`=`user`.`account_code`
